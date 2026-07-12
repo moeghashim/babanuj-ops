@@ -1,0 +1,5 @@
+# Keep the build context tiny and secret-free — ship only what the image needs.
+*
+!shopify-sync.py
+!lib
+!lib/**

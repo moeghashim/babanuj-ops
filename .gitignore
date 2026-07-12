@@ -1,0 +1,31 @@
+# Secrets never live in this repo — channel credentials are in ~/.config/*/.env,
+# and run-marketing-sync.sh fetches the prod DB password from the VPS at runtime.
+# These patterns are belt-and-suspenders in case a cred file ever lands here.
+.env
+*.env
+secrets/
+*.key
+*.pem
+config.toml
+
+# Generated / cached API pulls (recreated by the extractors)
+amazon-ads/
+data/
+
+# Logs
+*.log
+launchd-*.out
+launchd-*.err
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor / backups
+.DS_Store
+*.bak
+*.swp
+
+# Binaries — add deliberately after a look (design docs may embed account/app IDs)
+*.pdf
