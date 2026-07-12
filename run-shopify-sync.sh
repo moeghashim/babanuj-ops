@@ -10,6 +10,14 @@ set -euo pipefail
 ENVF=/opt/babanuj-command-center/.env.production
 PW=$(grep -E '^POSTGRES_PASSWORD=' "$ENVF" | cut -d= -f2- | tr -d "\"'")
 DAYS="${1:-2}"
+# Self-heal: the image is a LOCAL build (never pushed to a registry), so a
+# `docker prune` can silently delete it — after which every run fails with
+# "pull access denied" and writes nothing (this happened 2026-06-25 → 07-12,
+# freezing website revenue). Rebuild it from this script's dir if it's gone.
+if ! docker image inspect babanuj-ops:latest >/dev/null 2>&1; then
+  echo "=== $(date -u +%FT%TZ) babanuj-ops:latest missing — rebuilding ==="
+  docker build -t babanuj-ops:latest "$(dirname "$0")"
+fi
 echo "=== $(date -u +%FT%TZ) shopify-sync --days $DAYS ==="
 exec docker run --rm --network bcc-prod-net \
   -e DATABASE_URL="postgres://bcc:${PW}@db:5432/bcc" \
