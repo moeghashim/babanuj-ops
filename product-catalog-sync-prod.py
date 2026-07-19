@@ -99,10 +99,11 @@ def amazon_pull():
     return out
 
 def amazon_prices():
-    """asin -> selling price, from a GET_MERCHANT_LISTINGS_ALL_DATA report.
-    One report covers every active listing (SKU, ASIN, price) — far cheaper than
-    a per-SKU Listings-API call. Returns {} on any failure so the sync still runs
-    (prices just stay whatever they were; the dashboard falls back to 'Listed')."""
+    """asin -> {"price": float, "fulfillment": "FBA"|"FBM"} from a
+    GET_MERCHANT_LISTINGS_ALL_DATA report. One report covers every active listing
+    (SKU, ASIN, price, fulfillment-channel). We prefer the FBA offer's price and
+    fall back to the merchant-fulfilled (FBM) price. Returns {} on any failure so
+    the sync still runs (the dashboard then falls back to the 'Listed' tag)."""
     def cli(args, inp=None, t=60):
         return subprocess.run(["amazon-seller-pp-cli", *args, "--agent"],
                               input=inp, capture_output=True, text=True, timeout=t).stdout
@@ -131,15 +132,21 @@ def amazon_prices():
             if doc.get("compressionAlgorithm") == "GZIP" else raw.decode("utf-8", "replace")
         lines = text.splitlines()
         hdr = [h.lstrip("﻿") for h in lines[0].split("\t")]
-        ia, ip = hdr.index("asin1"), hdr.index("price")
-        out = {}
+        ia, ip, ifc = hdr.index("asin1"), hdr.index("price"), hdr.index("fulfillment-channel")
+        fba, fbm = {}, {}  # asin -> price, kept per fulfillment type
         for ln in lines[1:]:
             c = ln.split("\t")
-            if len(c) <= max(ia, ip): continue
-            a, p = c[ia].strip(), c[ip].strip()
-            if a and p:
-                try: out[a] = float(p)
-                except ValueError: pass
+            if len(c) <= max(ia, ip, ifc): continue
+            a, p, fc = c[ia].strip(), c[ip].strip(), c[ifc].strip()
+            if not (a and p): continue
+            try: pr = float(p)
+            except ValueError: continue
+            # fulfillment-channel: 'DEFAULT' = merchant (FBM); 'AMAZON*' = FBA.
+            (fba if fc.upper().startswith("AMAZON") else fbm)[a] = pr
+        out = {}
+        for a in set(fba) | set(fbm):
+            if a in fba: out[a] = {"price": fba[a], "fulfillment": "FBA"}
+            else: out[a] = {"price": fbm[a], "fulfillment": "FBM"}
         return out
     except Exception as e:
         print(f"[amazon-price] parse failed: {e}", file=sys.stderr); return {}
@@ -167,15 +174,19 @@ def main():
 
     lines=["begin;",
       "create table if not exists amazon_products(asin text primary key, sku text, title text, image_url text, price numeric(10,2), updated_at timestamptz not null default now());",
+      "alter table amazon_products add column if not exists fulfillment text;",
+      "alter table amazon_products add column if not exists ad_spend_30d numeric(12,2);",
+      "alter table amazon_products add column if not exists ad_sales_30d numeric(12,2);",
       "create table if not exists shopify_products(handle text primary key, title text not null, price numeric(10,2), image_url text, status text, updated_at timestamptz not null default now());",
       "create table if not exists product_crosswalk(amazon_asin text primary key, shopify_handle text, amazon_only boolean not null default false, suggested_handle text, suggested_score numeric, updated_at timestamptz not null default now());"]
     for s in shop:
         lines.append(f"insert into shopify_products(handle,title,price,image_url,status) values({sql_lit(s['handle'])},{sql_lit(s['title'])},{s['price'] or 'NULL'},{sql_lit(s['image'])},{sql_lit(s['status'])}) on conflict(handle) do update set title=excluded.title,price=excluded.price,image_url=excluded.image_url,status=excluded.status,updated_at=now();")
     for a in amz:
-        pr = prices.get(a["asin"])
-        prlit = f"{pr:.2f}" if pr is not None else "NULL"
-        # coalesce keeps a prior price when this report didn't cover the ASIN.
-        lines.append(f"insert into amazon_products(asin,sku,title,image_url,price) values({sql_lit(a['asin'])},{sql_lit(a['sku'])},{sql_lit(a['title'])},{sql_lit(a['image'])},{prlit}) on conflict(asin) do update set sku=excluded.sku,title=excluded.title,image_url=excluded.image_url,price=coalesce(excluded.price,amazon_products.price),updated_at=now();")
+        off = prices.get(a["asin"])
+        prlit = f"{off['price']:.2f}" if off else "NULL"
+        fclit = sql_lit(off["fulfillment"]) if off else "NULL"
+        # coalesce keeps a prior price/fulfillment when this report didn't cover the ASIN.
+        lines.append(f"insert into amazon_products(asin,sku,title,image_url,price,fulfillment) values({sql_lit(a['asin'])},{sql_lit(a['sku'])},{sql_lit(a['title'])},{sql_lit(a['image'])},{prlit},{fclit}) on conflict(asin) do update set sku=excluded.sku,title=excluded.title,image_url=excluded.image_url,price=coalesce(excluded.price,amazon_products.price),fulfillment=coalesce(excluded.fulfillment,amazon_products.fulfillment),updated_at=now();")
     for a in amz:
         sc,h=sugg[a["asin"]]
         lines.append(f"insert into product_crosswalk(amazon_asin,suggested_handle,suggested_score) values({sql_lit(a['asin'])},{sql_lit(h)},{sc}) on conflict(amazon_asin) do update set suggested_handle=excluded.suggested_handle,suggested_score=excluded.suggested_score;")
