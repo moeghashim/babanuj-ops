@@ -13,7 +13,7 @@ ops.babanuj.com Product Matching UI.
 Amazon creds stay on this Mac; prod bcc (no host port) is reached via the
 babanuj_deploy SSH key + `docker exec psql`.
 """
-import os, sys, json, re, subprocess, urllib.request, urllib.parse
+import os, sys, json, re, subprocess, urllib.request, urllib.parse, gzip, time
 
 HOME = os.path.expanduser("~")
 VPS = "root@<vps-host>"
@@ -98,6 +98,52 @@ def amazon_pull():
         if (i+1)%20==0: print(f"  amazon {i+1}/{len(seen)}",file=sys.stderr)
     return out
 
+def amazon_prices():
+    """asin -> selling price, from a GET_MERCHANT_LISTINGS_ALL_DATA report.
+    One report covers every active listing (SKU, ASIN, price) — far cheaper than
+    a per-SKU Listings-API call. Returns {} on any failure so the sync still runs
+    (prices just stay whatever they were; the dashboard falls back to 'Listed')."""
+    def cli(args, inp=None, t=60):
+        return subprocess.run(["amazon-seller-pp-cli", *args, "--agent"],
+                              input=inp, capture_output=True, text=True, timeout=t).stdout
+    try:
+        rid = json.loads(cli(["reports", "create", "--stdin"],
+              inp=json.dumps({"reportType": "GET_MERCHANT_LISTINGS_ALL_DATA",
+                              "marketplaceIds": [MKT]})))["data"]["reportId"]
+    except Exception as e:
+        print(f"[amazon-price] create failed: {e}", file=sys.stderr); return {}
+    docid = None
+    for _ in range(60):  # ~20 min ceiling; reports usually finish in <2 min
+        try:
+            r = json.loads(cli(["reports", "get", rid]))["results"]
+            st = r["processingStatus"]
+            if st == "DONE": docid = r["reportDocumentId"]; break
+            if st in ("FATAL", "CANCELLED"):
+                print(f"[amazon-price] report {st}", file=sys.stderr); return {}
+        except Exception: pass
+        time.sleep(20)
+    if not docid:
+        print("[amazon-price] report never finished", file=sys.stderr); return {}
+    try:
+        doc = json.loads(cli(["reports", "document", docid]))["results"]
+        raw = urllib.request.urlopen(doc["url"], timeout=60).read()
+        text = gzip.decompress(raw).decode("utf-8", "replace") \
+            if doc.get("compressionAlgorithm") == "GZIP" else raw.decode("utf-8", "replace")
+        lines = text.splitlines()
+        hdr = [h.lstrip("﻿") for h in lines[0].split("\t")]
+        ia, ip = hdr.index("asin1"), hdr.index("price")
+        out = {}
+        for ln in lines[1:]:
+            c = ln.split("\t")
+            if len(c) <= max(ia, ip): continue
+            a, p = c[ia].strip(), c[ip].strip()
+            if a and p:
+                try: out[a] = float(p)
+                except ValueError: pass
+        return out
+    except Exception as e:
+        print(f"[amazon-price] parse failed: {e}", file=sys.stderr); return {}
+
 def sql_lit(s):
     if s is None: return "NULL"
     return "$q$"+str(s)+"$q$"
@@ -106,6 +152,7 @@ def main():
     if "--amz-creds" in sys.argv: pass
     print("[shopify] pull…",file=sys.stderr); shop=shopify_pull(); print(f"[shopify] {len(shop)}",file=sys.stderr)
     print("[amazon] pull catalog…",file=sys.stderr); amz=amazon_pull(); print(f"[amazon] {len(amz)}",file=sys.stderr)
+    print("[amazon] pull prices…",file=sys.stderr); prices=amazon_prices(); print(f"[amazon] {len(prices)} priced",file=sys.stderr)
 
     # suggestions
     shop_sig=[(toks(s["handle"].replace("-"," ")+" "+s["title"]), szs(s["handle"]+" "+s["title"]), s) for s in shop]
@@ -125,7 +172,10 @@ def main():
     for s in shop:
         lines.append(f"insert into shopify_products(handle,title,price,image_url,status) values({sql_lit(s['handle'])},{sql_lit(s['title'])},{s['price'] or 'NULL'},{sql_lit(s['image'])},{sql_lit(s['status'])}) on conflict(handle) do update set title=excluded.title,price=excluded.price,image_url=excluded.image_url,status=excluded.status,updated_at=now();")
     for a in amz:
-        lines.append(f"insert into amazon_products(asin,sku,title,image_url) values({sql_lit(a['asin'])},{sql_lit(a['sku'])},{sql_lit(a['title'])},{sql_lit(a['image'])}) on conflict(asin) do update set sku=excluded.sku,title=excluded.title,image_url=excluded.image_url,updated_at=now();")
+        pr = prices.get(a["asin"])
+        prlit = f"{pr:.2f}" if pr is not None else "NULL"
+        # coalesce keeps a prior price when this report didn't cover the ASIN.
+        lines.append(f"insert into amazon_products(asin,sku,title,image_url,price) values({sql_lit(a['asin'])},{sql_lit(a['sku'])},{sql_lit(a['title'])},{sql_lit(a['image'])},{prlit}) on conflict(asin) do update set sku=excluded.sku,title=excluded.title,image_url=excluded.image_url,price=coalesce(excluded.price,amazon_products.price),updated_at=now();")
     for a in amz:
         sc,h=sugg[a["asin"]]
         lines.append(f"insert into product_crosswalk(amazon_asin,suggested_handle,suggested_score) values({sql_lit(a['asin'])},{sql_lit(h)},{sc}) on conflict(amazon_asin) do update set suggested_handle=excluded.suggested_handle,suggested_score=excluded.suggested_score;")
