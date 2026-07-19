@@ -81,14 +81,15 @@ def asin_perf(env):
     if not url:
         print("[perf] report never completed", file=sys.stderr); return {}
     rows = json.loads(gzip.decompress(urllib.request.urlopen(url, timeout=60).read()).decode())
-    agg = defaultdict(lambda: [0.0, 0.0])
+    agg = defaultdict(lambda: [0.0, 0.0, 0])
     for x in rows:
         a = x.get("advertisedAsin")
         if not a:
             continue
         agg[a][0] += float(x.get("cost", 0) or 0)
         agg[a][1] += float(x.get("sales30d", 0) or 0)
-    return {a: {"spend": c, "sales": s} for a, (c, s) in agg.items()}
+        agg[a][2] += int(float(x.get("purchases30d", 0) or 0))
+    return {a: {"spend": c, "sales": s, "orders": o} for a, (c, s, o) in agg.items()}
 
 
 def main():
@@ -99,9 +100,10 @@ def main():
         sys.exit(1)
     lines = ["begin;",
              "alter table amazon_products add column if not exists ad_spend_30d numeric(12,2);",
-             "alter table amazon_products add column if not exists ad_sales_30d numeric(12,2);"]
+             "alter table amazon_products add column if not exists ad_sales_30d numeric(12,2);",
+             "alter table amazon_products add column if not exists ad_orders_30d integer;"]
     for a, v in perf.items():
-        lines.append(f"update amazon_products set ad_spend_30d={v['spend']:.2f}, ad_sales_30d={v['sales']:.2f}, updated_at=now() where asin='{a}';")
+        lines.append(f"update amazon_products set ad_spend_30d={v['spend']:.2f}, ad_sales_30d={v['sales']:.2f}, ad_orders_30d={v['orders']}, updated_at=now() where asin='{a}';")
     lines.append("commit;")
     p = subprocess.run(["ssh", "-i", KEY, "-o", "BatchMode=yes", "-o", "ConnectTimeout=20", VPS,
                         "docker exec -i bcc-prod-postgres psql -U bcc -d bcc"],
