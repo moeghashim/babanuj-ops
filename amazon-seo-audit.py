@@ -200,8 +200,35 @@ def score(asin, lst, st, kw, ad_sales):
     fails = sum(1 for c in checks if c["verdict"] == "fail")
     warns = sum(1 for c in checks if c["verdict"] == "warn")
     passes = sum(1 for c in checks if c["verdict"] == "pass")
+
+    # Score /10. Weights are explicit and auditable: keyword coverage and earned
+    # demand dominate because they are what SEO actually moves; copy hygiene is
+    # necessary but not sufficient. pass = full, warn = half, fail = 0. Checks
+    # that could not be evaluated are excluded and the rest renormalised, so a
+    # missing signal never silently reads as a failure. Buy box is a gate, not a
+    # credit: it can only subtract.
+    WEIGHTS = {"keyword_coverage": 2.5, "organic_share": 2.0, "conversion_rate": 1.5,
+               "title_length": 1.0, "bullets": 1.0, "images": 1.0,
+               "bullet_depth": 0.5, "description": 0.5}
+    by = {c["check"]: c["verdict"] for c in checks}
+    earned = available = 0.0
+    breakdown = []
+    for name, w in WEIGHTS.items():
+        v = by.get(name)
+        if v is None or v == "n/a":
+            continue
+        got = w if v == "pass" else (w / 2 if v == "warn" else 0.0)
+        earned += got; available += w
+        breakdown.append({"check": name, "weight": w, "verdict": v, "earned": round(got, 2)})
+    raw = (earned / available * 10) if available else None
+    penalty = 1.0 if by.get("buy_box") == "fail" else 0.0
+    score = None if raw is None else max(0.0, round(raw - penalty, 1))
+    if penalty:
+        breakdown.append({"check": "buy_box", "weight": -1.0, "verdict": "fail", "earned": -1.0})
+
     grade = "strong" if fails == 0 and warns <= 1 else ("weak" if fails >= 3 else "needs work")
     return {"asin": asin, "title": title, "grade": grade,
+            "score": score, "score_breakdown": breakdown,
             "passes": passes, "warns": warns, "fails": fails,
             "sessions": st["sessions"] if st else None,
             "cvr_pct": st.get("cvr_pct") if st else None,
@@ -261,9 +288,16 @@ def main():
         results.append(score(a, lst, st.get(a), kw_by_asin.get(a, []), ad.get(a, 0.0)))
         if i % 20 == 0: print(f"[seo] {i}/{len(targets)}", file=sys.stderr)
 
-    rank = {"weak": 0, "needs work": 1, "strong": 2}
-    results.sort(key=lambda r: (rank[r["grade"]], -(r["total_sales"] or 0)))
+    # Worst score first, but weight by money at stake so a bad ASIN with real
+    # revenue outranks a bad ASIN nobody buys.
+    results.sort(key=lambda r: (r["score"] if r["score"] is not None else 99,
+                                -(r["total_sales"] or 0)))
+    scored = [r["score"] for r in results if r["score"] is not None]
     summary = {"asins": len(results),
+               "avg_score": round(sum(scored)/len(scored), 1) if scored else None,
+               "score_8_plus": sum(1 for x in scored if x >= 8),
+               "score_5_to_8": sum(1 for x in scored if 5 <= x < 8),
+               "score_under_5": sum(1 for x in scored if x < 5),
                "strong": sum(1 for r in results if r["grade"] == "strong"),
                "needs_work": sum(1 for r in results if r["grade"] == "needs work"),
                "weak": sum(1 for r in results if r["grade"] == "weak"),
