@@ -92,6 +92,52 @@ def asin_perf(env):
     return {a: {"spend": c, "sales": s, "orders": o} for a, (c, s, o) in agg.items()}
 
 
+def asin_perf_daily(env, days=30):
+    """[(asin, date, spend, sales, orders)] per day, for range-queryable metrics.
+
+    Feeds asin_metrics_daily so the dashboard can total any start/end window with
+    correct ASIN attribution — summing campaign metrics up to an ASIN would
+    over-count, since one campaign can advertise several ASINs. History simply
+    accumulates: each run refreshes the trailing window, older days stay put.
+    """
+    access = access_token(env)
+    H = headers(env, access)
+    end = datetime.now(timezone.utc).date() - timedelta(days=1)
+    start = end - timedelta(days=days - 1)
+    body = {"name": "asin-perf-daily", "startDate": start.isoformat(), "endDate": end.isoformat(),
+            "configuration": {"adProduct": "SPONSORED_PRODUCTS", "groupBy": ["advertiser"],
+                              "columns": ["date", "advertisedAsin", "cost", "sales30d", "purchases30d"],
+                              "reportTypeId": "spAdvertisedProduct", "timeUnit": "DAILY",
+                              "format": "GZIP_JSON"}}
+    ch = dict(H); ch["Content-Type"] = "application/vnd.createasyncreportrequest.v3+json"
+    req = urllib.request.Request(HOST + "/reporting/reports", data=json.dumps(body).encode(), headers=ch, method="POST")
+    rid = json.loads(urllib.request.urlopen(req, timeout=60).read())["reportId"]
+    print(f"[perf-daily] report {rid} — polling…", file=sys.stderr)
+    url = None
+    for _ in range(40):
+        try:
+            r = json.loads(urllib.request.urlopen(urllib.request.Request(HOST + "/reporting/reports/" + rid, headers=H), timeout=60).read())
+        except urllib.error.URLError:
+            time.sleep(30); continue
+        if r["status"] == "COMPLETED": url = r["url"]; break
+        if r["status"] == "FAILED":
+            print(f"[perf-daily] FAILED: {r.get('failureReason')}", file=sys.stderr); return []
+        time.sleep(30)
+    if not url:
+        print("[perf-daily] report never completed", file=sys.stderr); return []
+    rows = json.loads(gzip.decompress(urllib.request.urlopen(url, timeout=60).read()).decode())
+    out = defaultdict(lambda: [0.0, 0.0, 0])
+    for x in rows:
+        a, d = x.get("advertisedAsin"), x.get("date")
+        if not (a and d):
+            continue
+        k = (a, d[:10])
+        out[k][0] += float(x.get("cost", 0) or 0)
+        out[k][1] += float(x.get("sales30d", 0) or 0)
+        out[k][2] += int(float(x.get("purchases30d", 0) or 0))
+    return [(a, d, c, s, o) for (a, d), (c, s, o) in out.items()]
+
+
 def main():
     env = load_env(ENV)
     perf = asin_perf(env)
@@ -104,6 +150,20 @@ def main():
              "alter table amazon_products add column if not exists ad_orders_30d integer;"]
     for a, v in perf.items():
         lines.append(f"update amazon_products set ad_spend_30d={v['spend']:.2f}, ad_sales_30d={v['sales']:.2f}, ad_orders_30d={v['orders']}, updated_at=now() where asin='{a}';")
+
+    # Daily ASIN-attributed series (range-queryable). Upsert so re-running just
+    # refreshes the trailing window; earlier days accumulate untouched.
+    daily = asin_perf_daily(env)
+    print(f"[perf-daily] {len(daily)} asin-day rows", file=sys.stderr)
+    lines.append("""create table if not exists asin_metrics_daily(
+      asin text not null, date date not null,
+      spend numeric(12,2) not null default 0,
+      sales numeric(12,2) not null default 0,
+      orders integer not null default 0,
+      primary key (asin, date));""")
+    for a, d, c, s, o in daily:
+        lines.append(f"insert into asin_metrics_daily(asin,date,spend,sales,orders) values('{a}','{d}',{c:.2f},{s:.2f},{o}) "
+                     f"on conflict(asin,date) do update set spend=excluded.spend, sales=excluded.sales, orders=excluded.orders;")
     lines.append("commit;")
     p = subprocess.run(["ssh", "-i", KEY, "-o", "BatchMode=yes", "-o", "ConnectTimeout=20", VPS,
                         "docker exec -i bcc-prod-postgres psql -U bcc -d bcc"],

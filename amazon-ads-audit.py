@@ -226,6 +226,29 @@ def build_audit(data, top_cannibal, portfolios=None):
             "portfolio_strays": [{"name": cname(c), "portfolio": pn_of(c)}
                                  for c in cids if camp_port.get(c) != home_pid],
         }
+
+        # Every campaign for this ASIN — compliant ones included — each carrying
+        # its own fix (empty = no action). `id` is the bare Amazon campaignId;
+        # the dashboard joins performance via 'amazon_sp:' || id.
+        def per_campaign_recs(c):
+            recs = []
+            if c in v_exact_c:
+                recs.append(f"Split to 1 keyword per campaign ({len(kw_by_c[c])} now).")
+            if c in v_bp_c:
+                recs.append(f"Trim/split to ≤5 keywords ({len(kw_by_c[c])} now).")
+            if c in v_ag_c:
+                recs.append(f"Consolidate to one ad group ({len(ag_by_c[c])} now).")
+            if camp_port.get(c) != home_pid:
+                home = (port_name.get(home_pid) or str(home_pid)) if home_pid else None
+                recs.append(f"Move to {home}." if home else "Assign to the parent ASIN's portfolio.")
+            return recs
+
+        evidence["campaigns"] = sorted(
+            ({"id": str(c), "name": cname(c), "type": cls[c],
+              "ad_groups": len(ag_by_c[c]), "keywords": len(kw_by_c[c]),
+              "portfolio": pn_of(c), "is_home": camp_port.get(c) == home_pid,
+              "recommendations": per_campaign_recs(c)} for c in cids),
+            key=lambda r: (not r["recommendations"], r["type"], r["name"]))
         asins.append({"asin": asin, "n_campaigns": len(cids), "n_product_ads": asin_ads[asin],
                       "types": dict(types), "has_auto": has_auto, "has_exact": has_exact,
                       "has_broad_phrase": has_bp, "missing": missing,
