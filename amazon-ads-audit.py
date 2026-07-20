@@ -15,7 +15,7 @@ LOCAL Command Center Postgres (DATABASE_URL). Never mutates an ad account.
 Usage:
   DATABASE_URL=postgres://bcc:bcc@localhost:5433/bcc amazon-ads-audit.py [--top-cannibalization 60]
 """
-import os, sys, json, time, argparse, urllib.request, urllib.error, urllib.parse
+import os, re, sys, json, time, argparse, urllib.request, urllib.error, urllib.parse
 from datetime import datetime, timezone
 from collections import defaultdict, Counter
 
@@ -155,6 +155,11 @@ def build_audit(data, top_cannibal, portfolios=None):
     # Portfolio names, and each campaign's portfolio (None = campaign sits outside any portfolio).
     port_name = {p["portfolioId"]: p.get("name") for p in (portfolios or [])}
     camp_port = {c: camps[c].get("portfolioId") for c in eids}
+    # Catch-all portfolios are a deliberate separate construct (strategy.md):
+    # exempt from the one-portfolio-per-parent-ASIN rule, never flagged as strays.
+    catch_all_pids = {pid for pid, nm in port_name.items()
+                      if nm and re.search(r"catch\s*-?\s*all", nm, re.I)}
+    is_catch_all = lambda c: camp_port.get(c) in catch_all_pids
     # Per-campaign 1-1-5 violations (Exact >1 kw, Broad/Phrase >5 kw, >1 ad group).
     v_exact_c = {c for c in eids if cls[c] == "Exact" and len(kw_by_c[c]) > 1}
     v_bp_c = {c for c in eids if cls[c] in ("Broad", "Phrase") and len(kw_by_c[c]) > 5}
@@ -198,9 +203,10 @@ def build_audit(data, top_cannibal, portfolios=None):
         viol = {"exact_multi_kw": sum(1 for c in cids if c in v_exact_c),
                 "broadphrase_over5": sum(1 for c in cids if c in v_bp_c),
                 "multi_adgroup": sum(1 for c in cids if c in v_ag_c)}
-        pids = {camp_port[c] for c in cids if camp_port.get(c)}
+        pids = {camp_port[c] for c in cids if camp_port.get(c) and not is_catch_all(c)}
         ports = sorted(({"id": str(pid), "name": port_name.get(pid)} for pid in pids),
                        key=lambda p: (p["name"] or ""))
+        n_noncatch = sum(1 for c in cids if not is_catch_all(c))
         has_viol = any(viol.values()) or len(pids) > 1
         status = "violations" if has_viol else ("gaps" if missing else "compliant")
 
@@ -209,7 +215,7 @@ def build_audit(data, top_cannibal, portfolios=None):
         # the specific campaign to open in Amazon.
         cname = lambda c: camps[c].get("name", "")
         pn_of = lambda c: "(no portfolio)" if not camp_port.get(c) else (port_name.get(camp_port[c]) or str(camp_port[c]))
-        pdist = Counter(camp_port.get(c) for c in cids)
+        pdist = Counter(camp_port.get(c) for c in cids if not is_catch_all(c))
         home_pid = max((p for p in pdist if p), key=lambda p: pdist[p], default=None)
         evidence = {
             "exact_multi_kw": sorted(({"name": cname(c), "keywords": len(kw_by_c[c])} for c in cids if c in v_exact_c),
@@ -224,7 +230,8 @@ def build_audit(data, top_cannibal, portfolios=None):
                 for pid, n in pdist.most_common()],
             "home_portfolio": None if not home_pid else (port_name.get(home_pid) or str(home_pid)),
             "portfolio_strays": [{"name": cname(c), "portfolio": pn_of(c)}
-                                 for c in cids if camp_port.get(c) != home_pid],
+                                 for c in cids
+                                 if camp_port.get(c) != home_pid and not is_catch_all(c)],
         }
 
         # Every campaign for this ASIN — compliant ones included — each carrying
@@ -238,7 +245,7 @@ def build_audit(data, top_cannibal, portfolios=None):
                 recs.append(f"Trim/split to ≤5 keywords ({len(kw_by_c[c])} now).")
             if c in v_ag_c:
                 recs.append(f"Consolidate to one ad group ({len(ag_by_c[c])} now).")
-            if camp_port.get(c) != home_pid:
+            if camp_port.get(c) != home_pid and not is_catch_all(c):
                 home = (port_name.get(home_pid) or str(home_pid)) if home_pid else None
                 recs.append(f"Move to {home}." if home else "Assign to the parent ASIN's portfolio.")
             return recs
@@ -254,7 +261,10 @@ def build_audit(data, top_cannibal, portfolios=None):
                       "has_broad_phrase": has_bp, "missing": missing,
                       "violations": viol, "portfolios": ports, "n_portfolios": len(pids),
                       "status": status, "evidence": evidence,
-                      "recommendations": recommend(missing, viol, len(pids), len(cids))})
+                      # Portfolio rules apply only to non-catch-all campaigns; an
+                      # ASIN living entirely in a catch-all portfolio is by design.
+                      "n_campaigns_outside_catch_all": n_noncatch,
+                      "recommendations": recommend(missing, viol, len(pids), n_noncatch)})
     # Worst-first: violations, then gaps, then compliant; ties by campaign count.
     _rank = {"violations": 0, "gaps": 1, "compliant": 2}
     asins.sort(key=lambda r: (_rank[r["status"]], -r["n_campaigns"]))
@@ -315,7 +325,8 @@ def build_audit(data, top_cannibal, portfolios=None):
                 "no_broad_phrase": sum(1 for r in asins if not r["has_broad_phrase"]),
                 "single_campaign": sum(1 for r in asins if r["n_campaigns"] == 1),
                 "multi_portfolio": sum(1 for r in asins if r["n_portfolios"] > 1),
-                "no_portfolio": sum(1 for r in asins if r["n_portfolios"] == 0),
+                "no_portfolio": sum(1 for r in asins if r["n_portfolios"] == 0
+                                    and r["n_campaigns_outside_catch_all"] > 0),
             },
             "violations": {"exact_multi_kw": v_exact_multi, "broadphrase_over5": v_bp_over5, "multi_adgroup": v_multi_ag},
             "cannibalized_keywords": len(cannib),
