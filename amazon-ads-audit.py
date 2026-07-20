@@ -203,11 +203,34 @@ def build_audit(data, top_cannibal, portfolios=None):
                        key=lambda p: (p["name"] or ""))
         has_viol = any(viol.values()) or len(pids) > 1
         status = "violations" if has_viol else ("gaps" if missing else "compliant")
+
+        # Evidence: the exact offending campaigns behind each finding, plus the
+        # portfolio spread — so the dashboard can drill from a recommendation to
+        # the specific campaign to open in Amazon.
+        cname = lambda c: camps[c].get("name", "")
+        pn_of = lambda c: "(no portfolio)" if not camp_port.get(c) else (port_name.get(camp_port[c]) or str(camp_port[c]))
+        pdist = Counter(camp_port.get(c) for c in cids)
+        home_pid = max((p for p in pdist if p), key=lambda p: pdist[p], default=None)
+        evidence = {
+            "exact_multi_kw": sorted(({"name": cname(c), "keywords": len(kw_by_c[c])} for c in cids if c in v_exact_c),
+                                     key=lambda x: -x["keywords"]),
+            "broadphrase_over5": sorted(({"name": cname(c), "type": cls[c], "keywords": len(kw_by_c[c])} for c in cids if c in v_bp_c),
+                                        key=lambda x: -x["keywords"]),
+            "multi_adgroup": sorted(({"name": cname(c), "type": cls[c], "ad_groups": len(ag_by_c[c])} for c in cids if c in v_ag_c),
+                                    key=lambda x: -x["ad_groups"]),
+            "portfolio_distribution": [
+                {"name": "(no portfolio)" if not pid else (port_name.get(pid) or str(pid)),
+                 "campaigns": n, "home": pid == home_pid}
+                for pid, n in pdist.most_common()],
+            "home_portfolio": None if not home_pid else (port_name.get(home_pid) or str(home_pid)),
+            "portfolio_strays": [{"name": cname(c), "portfolio": pn_of(c)}
+                                 for c in cids if camp_port.get(c) != home_pid],
+        }
         asins.append({"asin": asin, "n_campaigns": len(cids), "n_product_ads": asin_ads[asin],
                       "types": dict(types), "has_auto": has_auto, "has_exact": has_exact,
                       "has_broad_phrase": has_bp, "missing": missing,
                       "violations": viol, "portfolios": ports, "n_portfolios": len(pids),
-                      "status": status,
+                      "status": status, "evidence": evidence,
                       "recommendations": recommend(missing, viol, len(pids), len(cids))})
     # Worst-first: violations, then gaps, then compliant; ties by campaign count.
     _rank = {"violations": 0, "gaps": 1, "compliant": 2}
