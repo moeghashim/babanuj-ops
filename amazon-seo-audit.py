@@ -121,7 +121,104 @@ def norm(s):
     return re.sub(r"[^a-z0-9 ]", " ", (s or "").lower())
 
 
-def score(asin, lst, st, kw, ad_sales):
+
+# --- Relevance guard -------------------------------------------------------
+# A term that CONVERTED is not automatically a term this listing should target.
+# Auto campaigns match broadly, so a shopper searching "ajwa dates" can land on a
+# Safawi listing and buy. Recommending "ajwa" for a Safawi product misdescribes
+# it, pulls wrong-intent traffic, and depresses conversion. So: if a search term
+# names a product variety or type that this listing is NOT, drop it.
+VARIETIES = {  # mutually exclusive product identities
+ "date_variety": ["ajwa", "safawi", "sukkari", "sukari", "sukkary", "khodhri", "khodri", "khudri",
+                  "medjool", "medjoul", "mabroom", "mabroum", "khalas", "sagai", "sagaie", "saghai",
+                  "amber", "rutab", "deglet"],
+ "sweet_type":   ["baklava", "baklawa", "maamoul", "mamoul", "mamool", "ghraybeh", "graybah",
+                  "barazek", "kunafa", "knafeh", "kunafah", "lokum", "turkish delight", "nougat",
+                  "halva", "halawa", "tamriyah", "mabrumah", "mabrouma"],
+ "other_food":   ["tahini", "tahina", "honey", "cola", "coffee", "espresso", "chocolate bar",
+                  "cashew", "pistachio paste", "olive oil", "za'atar", "zaatar"],
+}
+# Terms too generic to earn a place in copy — they describe a shelf, not a product.
+# Regulated claims: real converting searches, but unusable without certification
+# on file. Ranking for them risks listing suppression, which costs more than the
+# traffic is worth. Surfaced separately so the exclusion is deliberate.
+CLAIM_TERMS = ["organic", "halal", "kosher", "non-gmo", "non gmo", "gluten free", "gluten-free",
+               "sugar free", "sugar-free", "keto", "vegan"]
+GENERIC_TERMS = {"sweets", "sweet", "produce", "food", "snacks", "snack", "candy", "dessert",
+                 "desserts", "gift", "gifts", "groceries", "grocery", "treats", "arabic sweets",
+                 "middle eastern sweets", "datiles", "dattes", "dates"}
+
+
+
+# Brands we do not own. A converting search for a competitor is real demand, but
+# putting their name in our copy is both a trademark risk and a promise we break.
+COMPETITOR_BRANDS = ["lindt", "lindts", "ferrero", "patchi", "bateel", "zalatimo", "amos",
+                     "godiva", "kinder", "nutella", "sadaf", "ziyad", "haribo", "turkiye market",
+                     "shatila", "oh nuts", "sukkary house", "al rifai", "arabica", "hallab"]
+
+# Words that carry no product identity — ignored when testing whether a search
+# term is about this product at all.
+NOISE = {"the","and","for","with","from","premium","luxury","authentic","traditional","natural",
+         "fresh","best","top","quality","gift","gifts","box","pack","packs","bulk","oz","lb","g",
+         "kg","count","pouch","tin","jar","assorted","assortment","mix","mixed","classic","real",
+         "delicious","tasty","gourmet","handmade","imported","large","small","medium","value",
+         "buy","online","free","shipping","delivery","overnight","near","me","in","of","to","a"}
+
+SYNONYMS = [  # different words for the same thing — treat as overlapping
+ {"lokum", "turkish", "delight"}, {"maamoul", "mamoul", "mamool", "mamul"},
+ {"ghraybeh", "graybah", "ghraybah"}, {"baklava", "baklawa"},
+ {"kunafa", "knafeh", "kunafah", "kataifi"}, {"tahini", "tahina", "sesame"},
+ {"date", "dates", "tamr", "tamriyah"}, {"cookie", "cookies", "biscuit", "biscuits"},
+ {"nut", "nuts", "pistachio", "pistachios", "cashew", "walnut", "almond"},
+ {"chocolate", "choc"}, {"honey"}, {"cola"}, {"coffee", "espresso"},
+]
+
+
+def content_tokens(text):
+    return {t for t in norm(text).split() if len(t) > 2 and t not in NOISE}
+
+
+def expand(tokens):
+    out = set(tokens)
+    for grp in SYNONYMS:
+        if out & grp:
+            out |= grp
+    return out
+
+def relevance(term, title_norm, known_vocab=None):
+    """(keep, reason). Drops cross-variety and generic terms."""
+    t = norm(term).strip()
+    for c in CLAIM_TERMS:
+        if c in t:
+            return False, f"regulated claim ('{c}') — needs certification on file"
+    if t in GENERIC_TERMS:
+        return False, "too generic to describe this product"
+    for b in COMPETITOR_BRANDS:
+        if re.search(rf"\b{re.escape(b)}\b", t) and b not in title_norm:
+            return False, f"competitor brand ('{b}') — not ours to claim"
+    for group, words in VARIETIES.items():
+        for w in words:
+            if w in t and w not in title_norm:
+                # the term names an identity this product does not have
+                mine = [x for x in words if x in title_norm]
+                if mine:
+                    return False, f"different {group.replace('_',' ')} — this is {mine[0]}, not {w}"
+                return False, f"names a {group.replace('_',' ')} ({w}) this listing is not"
+    # Finally: does this search share ANY product identity with the listing? A term
+    # with zero overlap converted by accident (broad auto match), not by intent.
+    tt, pt = expand(content_tokens(term)), expand(content_tokens(title_norm))
+    if pt and not (tt & pt):
+        return False, "unrelated to this product — no shared product terms"
+    # A hardcoded brand list can never be complete. Instead use our own catalogue
+    # as the vocabulary: a token that appears in NO listing we sell is probably a
+    # brand or product we do not carry. Flag for review rather than recommend it.
+    if known_vocab:
+        unknown = sorted(t for t in content_tokens(term) if t not in known_vocab)
+        if unknown:
+            return "review", f"contains unrecognised term(s): {', '.join(unknown[:3])} — check before using"
+    return True, None
+
+def score(asin, lst, st, kw, ad_sales, known_vocab=None):
     """Explicit per-check verdicts + the actions that follow from them."""
     checks, actions = [], []
     title = lst["title"]; tl = len(title)
@@ -160,11 +257,31 @@ def score(asin, lst, st, kw, ad_sales):
         actions.append("Write a fuller description / A+ content.")
 
     # Keyword coverage: do converting search terms appear in title+bullets?
-    hay = norm(title + " " + " ".join(lst["bullets"]) + " " + lst["description"])
-    covered, missing = [], []
+    # Record WHERE each converting term appears, not just whether it does — a term
+    # present only in the description carries far less ranking weight than one in
+    # the title, and the fix differs accordingly.
+    fields = {"title": norm(title),
+              "bullets": norm(" ".join(lst["bullets"])),
+              "description": norm(lst["description"])}
+    hay = " ".join(fields.values())
+    covered, missing, keywords, irrelevant, review = [], [], [], [], []
+    tnorm = fields["title"]
     for term, orders in kw:
+        keep, why = relevance(term, tnorm, known_vocab)
+        if keep == "review":
+            review.append({"term": term, "orders": orders, "reason": why}); continue
+        if not keep:
+            irrelevant.append({"term": term, "orders": orders, "reason": why})
+            continue
         toks = [t for t in norm(term).split() if len(t) > 2]
-        (covered if toks and all(t in hay for t in toks) else missing).append(term)
+        where = [f for f, txt in fields.items() if toks and all(t in txt for t in toks)]
+        is_cov = bool(toks) and all(t in hay for t in toks)
+        (covered if is_cov else missing).append(term)
+        keywords.append({"term": term, "orders": orders, "covered": is_cov,
+                         "in_title": "title" in where, "in_bullets": "bullets" in where,
+                         "in_description": "description" in where,
+                         # covered only via words scattered across fields, not in any single one
+                         "split_across_fields": is_cov and not where})
     cov_pct = round(len(covered) / len(kw) * 100) if kw else None
     checks.append({"check": "keyword_coverage", "standard": "converting terms present in copy",
                    "value": f"{len(covered)}/{len(kw)}" if kw else "no signal",
@@ -177,7 +294,12 @@ def score(asin, lst, st, kw, ad_sales):
 
     # Earned vs bought demand — the SEO strength signal
     total = st["sales"] if st else 0.0
-    organic = round(total - ad_sales, 2) if total else None
+    # Ad-attributed sales use a 30-day attribution window that does not align with
+    # the traffic window, so ad_sales can exceed total ordered sales. Clamp at zero
+    # and flag it rather than reporting a negative organic share as if it were real.
+    raw_organic = round(total - ad_sales, 2) if total else None
+    attribution_mismatch = bool(total and raw_organic is not None and raw_organic < 0)
+    organic = max(0.0, raw_organic) if raw_organic is not None else None
     organic_pct = round(organic / total * 100, 1) if total and organic is not None else None
     if organic_pct is not None:
         checks.append({"check": "organic_share", "standard": "majority of sales earned",
@@ -220,13 +342,18 @@ def score(asin, lst, st, kw, ad_sales):
         got = w if v == "pass" else (w / 2 if v == "warn" else 0.0)
         earned += got; available += w
         breakdown.append({"check": name, "weight": w, "verdict": v, "earned": round(got, 2)})
-    raw = (earned / available * 10) if available else None
+    # An ASIN with no traffic has no evaluable performance checks. Renormalising
+    # over copy hygiene alone would hand a never-sold listing a perfect score, so
+    # withhold the score instead of inventing confidence from absent data.
+    has_perf = any(k in by for k in ("organic_share", "conversion_rate"))
+    raw = (earned / available * 10) if available and has_perf else None
     penalty = 1.0 if by.get("buy_box") == "fail" else 0.0
     score = None if raw is None else max(0.0, round(raw - penalty, 1))
     if penalty:
         breakdown.append({"check": "buy_box", "weight": -1.0, "verdict": "fail", "earned": -1.0})
 
-    grade = "strong" if fails == 0 and warns <= 1 else ("weak" if fails >= 3 else "needs work")
+    grade = ("unrated" if score is None else
+             "strong" if fails == 0 and warns <= 1 else ("weak" if fails >= 3 else "needs work"))
     return {"asin": asin, "title": title, "grade": grade,
             "score": score, "score_breakdown": breakdown,
             "passes": passes, "warns": warns, "fails": fails,
@@ -235,8 +362,12 @@ def score(asin, lst, st, kw, ad_sales):
             "buybox_pct": st.get("buybox_pct") if st else None,
             "total_sales": total or None, "ad_sales": ad_sales or None,
             "organic_sales": organic, "organic_pct": organic_pct,
+            "attribution_mismatch": attribution_mismatch,
             "keyword_coverage_pct": cov_pct, "n_signal_terms": len(kw),
-            "missing_terms": missing[:10], "checks": checks, "actions": actions}
+            "missing_terms": missing[:10], "covered_terms": covered,
+            "irrelevant_terms": irrelevant, "review_terms": review,
+            "keywords": keywords,
+            "kw_in_title": sum(1 for k in keywords if k["in_title"]), "checks": checks, "actions": actions}
 
 
 def main():
@@ -279,13 +410,28 @@ def main():
         for a, d in tmp.items():
             kw_by_asin[a] = sorted(d.items(), key=lambda x: -x[1])[:15]
 
-    results = []
+    # Scope: ADVERTISED ASINs only (Moe, 2026-07-20). Widening to every ASIN with
+    # traffic was tried and explicitly scoped back — do not re-widen without asking.
     targets = sorted(ad)
-    for i, a in enumerate(targets, 1):
-        lst = listing(a)
-        if not lst:
-            continue
-        results.append(score(a, lst, st.get(a), kw_by_asin.get(a, []), ad.get(a, 0.0)))
+    print(f"[seo] roster {len(targets)} advertised ASINs", file=sys.stderr)
+    results = []
+    skipped = []
+    listings = {}
+    for a in targets:
+        l = listing(a)
+        if l: listings[a] = l
+        else: skipped.append(a)
+    # our own brands, incl. spelling variants shoppers actually type
+    OWN_BRANDS = {"zaitoun","zaitoune","zaytoun","leen","bal","milaf","ribal","babanuj","babanouj",
+                  "bab","sharqi","crush","reeq","alnahl","nahl","alkanater","kanater","dessert",
+                  "desert","arabic","middle","eastern","turkish","saudi","syrian","lebanese"}
+    known_vocab = set(OWN_BRANDS)
+    for l in listings.values():
+        known_vocab |= content_tokens(l["title"] + " " + " ".join(l["bullets"]))
+    print(f"[seo] catalogue vocabulary: {len(known_vocab)} terms from {len(listings)} listings", file=sys.stderr)
+    for i, a in enumerate(sorted(listings), 1):
+        lst = listings[a]
+        results.append(score(a, lst, st.get(a), kw_by_asin.get(a, []), ad.get(a, 0.0), known_vocab))
         if i % 20 == 0: print(f"[seo] {i}/{len(targets)}", file=sys.stderr)
 
     # Worst score first, but weight by money at stake so a bad ASIN with real
@@ -298,18 +444,23 @@ def main():
                "score_8_plus": sum(1 for x in scored if x >= 8),
                "score_5_to_8": sum(1 for x in scored if 5 <= x < 8),
                "score_under_5": sum(1 for x in scored if x < 5),
+               "unrated": sum(1 for r in results if r["grade"] == "unrated"),
                "strong": sum(1 for r in results if r["grade"] == "strong"),
                "needs_work": sum(1 for r in results if r["grade"] == "needs work"),
                "weak": sum(1 for r in results if r["grade"] == "weak"),
                "ad_dependent": sum(1 for r in results if (r["organic_pct"] or 100) < 30),
                "low_cvr": sum(1 for r in results if r["cvr_pct"] is not None and r["cvr_pct"] < CVR_HEALTHY),
+               "skipped_unreadable": len(skipped),
                "total_sales": round(sum(r["total_sales"] or 0 for r in results), 2),
                "organic_sales": round(sum(r["organic_sales"] or 0 for r in results), 2)}
+    if skipped:
+        print(f"[seo] {len(skipped)} ASIN(s) skipped — catalog unreadable", file=sys.stderr)
     payload = {"captured_at": datetime.now(timezone.utc).isoformat(), "channel": "amazon",
                "standards": {"title": [TITLE_MIN, TITLE_MAX], "bullets": BULLETS_EXPECTED,
                              "images_min": IMAGES_MIN, "cvr_healthy": CVR_HEALTHY,
                              "buybox_min": BUYBOX_MIN},
-               "summary": summary, "asins": results}
+               "summary": summary, "asins": results,
+               "skipped_asins": skipped}
     day = payload["captured_at"][:10]
     art = f"{OUTDIR}/seo-audit-{day}.json"
     json.dump(payload, open(art, "w"), indent=1)
