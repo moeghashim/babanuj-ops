@@ -42,8 +42,10 @@ def main():
         applied_at timestamptz);""",
      "delete from strategy_settings;"]
     n=0
+    HIDE=("margin_percent.","break_even_acos.")  # cost-based anchors; account steers on ACOS/ROAS/TACoS (Moe 2026-07-22)
     for k,v in sorted(flat.items()):
         if k=="version": continue
+        if any(k.startswith(h) for h in HIDE): continue
         val=json.dumps(v) if not isinstance(v,str) else v
         is_set = "false" if v=="unset" else "true"
         lines.append("insert into strategy_settings(key,value,group_name,is_set) values"
