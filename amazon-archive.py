@@ -5,6 +5,11 @@ Amazon retains ~90 days; this owns the history forever. Pulls a rolling window
 and upserts into archive tables so re-runs are idempotent and old days survive
 long after Amazon drops them.
 
+FULFILLMENT RULE (Moe, 2026-07-25): FBM orders are already recorded in Shopify's
+"Amazon" channel, so any Amazon SALES pull must be FBA-only or it double-counts
+FBM. Ad metrics below are ad-attributed performance, not a second copy of the
+order, so they are exempt. Any sales-report added here must filter to FBA.
+
   amazon-archive.py [--days 90]     # default 90 (Amazon's practical max)
 
 Tables (created on demand, in prod bcc):

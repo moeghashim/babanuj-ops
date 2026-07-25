@@ -1,0 +1,7927 @@
+{
+ "captured_at": "2026-07-20T19:25:26.927285+00:00",
+ "channel": "amazon",
+ "standards": {
+  "title": [
+   80,
+   200
+  ],
+  "bullets": 5,
+  "images_min": 6,
+  "cvr_healthy": 10.0,
+  "buybox_min": 90.0
+ },
+ "summary": {
+  "asins": 71,
+  "avg_score": 5.9,
+  "score_8_plus": 5,
+  "score_5_to_8": 34,
+  "score_under_5": 17,
+  "unrated": 15,
+  "strong": 3,
+  "needs_work": 41,
+  "weak": 12,
+  "ad_dependent": 11,
+  "low_cvr": 45,
+  "total_sales": 37399.01,
+  "organic_sales": 18212.9
+ },
+ "asins": [
+  {
+   "asin": "B0GL3WLBZK",
+   "title": "LEEN Safawi Dates Premium, 100% Natural & Hand-Picked Resealable Zipper Pouch | Soft, Naturally Sweet & Melt-in-Mouth | Authentic Dates from Al-Madinah Al-Munawarah (110 g)",
+   "grade": "weak",
+   "score": 2.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 1,
+   "fails": 4,
+   "sessions": 128,
+   "cvr_pct": 9.38,
+   "buybox_pct": 98.7,
+   "total_sales": 155.88,
+   "ad_sales": 149.89,
+   "organic_sales": 5.99,
+   "organic_pct": 3.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 14,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "ajwa dates",
+    "date organic",
+    "datiles",
+    "organic dates from turkey",
+    "produce",
+    "sweets"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 172,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "1 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 280,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/7",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "3.8%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "9.38%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add 1 bullet(s) \u2014 lost keyword surface.",
+    "Expand 1 thin bullet(s).",
+    "Work 5 converting term(s) into title/bullets: ajwa dates, date organic, datiles, organic dates from turkey, produce.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Safawi Dates Resealable Pouch",
+   "short_name": "Leen Safawi Dates Resealable Pouch"
+  },
+  {
+   "asin": "B09WLPY1R8",
+   "title": "Zaitoune Maamoul Date Cookies - 9 oz \u2013 Authentic Middle Eastern Sweets | Arabic Cookies with Dates \u2013 Premium Dessert Gifts in Elegant Tin",
+   "grade": "weak",
+   "score": 3.2,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "fail",
+     "earned": 0.0
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 4,
+   "sessions": 3329,
+   "cvr_pct": 3.94,
+   "buybox_pct": 99.6,
+   "total_sales": 3529.99,
+   "ad_sales": 2700.75,
+   "organic_sales": 829.24,
+   "organic_pct": 23.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "baklava",
+    "baklava gift box",
+    "zaitoun ghraybeh",
+    "turkish delight",
+    "zalatimo sweets",
+    "30 mamoul cookies filled with luxury dates 350g",
+    "arabic desert",
+    "baklava pastry with honey",
+    "biscuit",
+    "foreign snack box"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 137,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 122,
+     "verdict": "fail"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "23.5%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "3.94%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Write a fuller description / A+ content.",
+    "Work 5 converting term(s) into title/bullets: baklava, baklava gift box, zaitoun ghraybeh, turkish delight, zalatimo sweets.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Mamoul With Dates 250g",
+   "short_name": "Zaitoune Mamoul With Dates 250g"
+  },
+  {
+   "asin": "B0CDWN32VK",
+   "title": "Zaitoune Pistachio Baklava with Honey - 18 oz | Luxury Pastry Assortment | Arabic Dessert with Authentic flavors in Beautiful Gift Packaging | Traditional Recipe & Handmade in Turkey",
+   "grade": "weak",
+   "score": 3.2,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "fail",
+     "earned": 0.0
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 4,
+   "sessions": 361,
+   "cvr_pct": 3.32,
+   "buybox_pct": 98.6,
+   "total_sales": 580.38,
+   "ad_sales": 472.07,
+   "organic_sales": 108.31,
+   "organic_pct": 18.7,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun turkish delight",
+    "zaitoun ghraybeh",
+    "zaitoune turkish delight lokum - 260g 3 flavors: pistachio, rose & mixed fruit authentic middle",
+    "baklava greek pastry",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "shatila baklava pastry"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 182,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "18.7%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "3.32%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Write a fuller description / A+ content.",
+    "Work 5 converting term(s) into title/bullets: zaitoun turkish delight, zaitoun ghraybeh, zaitoune turkish delight lokum - 260g 3 flavors: pistachio, rose & mixed fruit authentic middle, baklava greek pastry, halal snack box.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava With Honey 500g",
+   "short_name": "Zaitoune Baklava With Honey 500g"
+  },
+  {
+   "asin": "B0CZ11GWWX",
+   "title": "Zaitoune Walnut Maamoul - 21 oz | Authentic Middle Eastern Butter Cookies with Nut Filling | Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect for Dessert & Sharing | Ideal Arabic Sweets Gift",
+   "grade": "weak",
+   "score": 3.2,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "warn",
+     "earned": 0.5
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 1,
+   "fails": 3,
+   "sessions": 278,
+   "cvr_pct": 2.52,
+   "buybox_pct": 99.4,
+   "total_sales": 271.93,
+   "ad_sales": 332.91,
+   "organic_sales": 0.0,
+   "organic_pct": 0.0,
+   "attribution_mismatch": true,
+   "keyword_coverage_pct": 25,
+   "n_signal_terms": 8,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul",
+    "mamul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 203,
+     "verdict": "warn"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 22,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1162,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/8",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "0.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "2.52%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Trim title below 200 chars \u2014 it truncates in search.",
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, halal snack box, medjool dates treat box, sesame pistachio cookies, zaitoun date maamoul.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Mamoul With Walnut 600g",
+   "short_name": "Zaitoune Mamoul With Walnut 600g"
+  },
+  {
+   "asin": "B096PS9VPP",
+   "title": "Zaitoune Cashew & Pistachio Baklava Selection Box | Traditional Luxury Honey Pastry | Arabic Dessert with Authentic flavors in Beautiful Packaging | Handmade in Turkey (100 g)",
+   "grade": "weak",
+   "score": 3.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 1214,
+   "cvr_pct": 5.85,
+   "buybox_pct": 99.7,
+   "total_sales": 1053.04,
+   "ad_sales": 750.03,
+   "organic_sales": 303.01,
+   "organic_pct": 28.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 27,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "barnetts biscotti gift box",
+    "bavlaka",
+    "chocolate gift basket",
+    "cookie gift",
+    "cookies on sale clearance",
+    "cup cakes bakery fresh",
+    "fruit and chocolate gift baskets",
+    "italian desserts",
+    "pistachios gift basket"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 175,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 203,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "28.8%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "5.85%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, barnetts biscotti gift box, bavlaka, chocolate gift basket, cookie gift.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava 100g",
+   "short_name": "Zaitoune Baklava 100g"
+  },
+  {
+   "asin": "B0GL986YXV",
+   "title": "Leen Date Maamoul with Chocolate, Arabic Cookies \u2013 200g | Date Paste Cookies with Chocolate Filling | Individually Shaped Pieces, Perfect for Tea & Coffee",
+   "grade": "weak",
+   "score": 3.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 369,
+   "cvr_pct": 7.86,
+   "buybox_pct": 97.7,
+   "total_sales": 658.51,
+   "ad_sales": 478.59,
+   "organic_sales": 179.92,
+   "organic_pct": 27.3,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 25,
+   "n_signal_terms": 12,
+   "missing_terms": [
+    "biscoff cookies",
+    "chocodate",
+    "chocolate covered dates",
+    "date biscuits",
+    "greek pastries bakery fresh",
+    "halwa dessert",
+    "saudi arabia chocolate",
+    "siete grain free mexican shortbread cookies",
+    "walkers shortbread"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 154,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 366,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "3/12",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "27.3%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.86%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: biscoff cookies, chocodate, chocolate covered dates, date biscuits, greek pastries bakery fresh.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Maamoul Chocolate Date Stuffed - 200g",
+   "short_name": "Leen Maamoul Chocolate Date Stuffed - 200g"
+  },
+  {
+   "asin": "B0DDYQG8CK",
+   "title": "Zaitoune Mixed Petit Fours Cookies \u2013 Assorted Chocolate & Pistachio Butter Cookies | Gourmet Middle Eastern Tea Biscuits | Premium Dessert Gift Box for Holidays, Gatherings & Gifting",
+   "grade": "weak",
+   "score": 3.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 1,
+   "fails": 3,
+   "sessions": 780,
+   "cvr_pct": 1.54,
+   "buybox_pct": 99.7,
+   "total_sales": 325.38,
+   "ad_sales": 163.44,
+   "organic_sales": 161.94,
+   "organic_pct": 49.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 31,
+   "n_signal_terms": 13,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "dessert fruit",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "petits fours",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 182,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 5,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1565,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/13",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "49.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "1.54%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+.",
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, dessert fruit, halal snack box, maamoul, maamoul cookies.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Petit Four Chocolate - 350g",
+   "short_name": "Zaitoune Petit Four Chocolate - 350g"
+  },
+  {
+   "asin": "B0CZ12LDXH",
+   "title": "Zaitoune Pistachio Maamoul - 1.1 lb | Authentic Middle Eastern Pistachio-Filled Cookies | Handcrafted in Turkey | Beautiful Reusable Gift Tin | Ideal Arabic Sweets Gift | Perfect Dessert with Tea",
+   "grade": "weak",
+   "score": 3.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 427,
+   "cvr_pct": 0.7,
+   "buybox_pct": 99.6,
+   "total_sales": 140.97,
+   "ad_sales": 355.89,
+   "organic_sales": 0.0,
+   "organic_pct": 0.0,
+   "attribution_mismatch": true,
+   "keyword_coverage_pct": 27,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "apricot cookies",
+    "eid cookies",
+    "marzipan",
+    "mediterranean snacks",
+    "turkish cookie",
+    "zalatimo sweets",
+    "halal snack box",
+    "medjool dates treat box",
+    "sesame pistachio cookies"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 195,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1162,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "0.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "0.7%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, apricot cookies, eid cookies, marzipan, mediterranean snacks.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Mamoul With Pistachio 500g",
+   "short_name": "Zaitoune Mamoul With Pistachio 500g"
+  },
+  {
+   "asin": "B0GL4ZSSFL",
+   "title": "LEEN Premium Golden Mix Dates from Madinah, Saudi Arabia \u2013 Ajwa, Safawi, Sagaie, Khodhri & Mabroom | Elegant Gift Box | Handpicked Assorted Dates | Natural & Fresh | 250g",
+   "grade": "weak",
+   "score": 3.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 74,
+   "cvr_pct": 6.76,
+   "buybox_pct": 96.5,
+   "total_sales": 109.15,
+   "ad_sales": 109.15,
+   "organic_sales": 0.0,
+   "organic_pct": 0.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "best dates organic",
+    "date variety pack leen"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 170,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 15,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 521,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/3",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "0.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.76%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 2 converting term(s) into title/bullets: best dates organic, date variety pack leen.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Golden Mix Dates From Madinah Palm - 250g",
+   "short_name": "Leen Golden Mix Dates From Madinah Palm\u2026"
+  },
+  {
+   "asin": "B0GL48VP6D",
+   "title": "Leen Khodhri Dates Resealable Zipper Pouch | Naturally Sweet with Rich, Traditional Taste | Authentic Saudi Dates | 100% Natural (110 g)",
+   "grade": "weak",
+   "score": 3.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 3,
+   "sessions": 317,
+   "cvr_pct": 5.68,
+   "buybox_pct": 99.2,
+   "total_sales": 233.17,
+   "ad_sales": 275.01,
+   "organic_sales": 0.0,
+   "organic_pct": 0.0,
+   "attribution_mismatch": true,
+   "keyword_coverage_pct": 12,
+   "n_signal_terms": 8,
+   "missing_terms": [
+    "dates medjool organic",
+    "dates bulk",
+    "dates pitted",
+    "datiles",
+    "medjool dates",
+    "pitted dates",
+    "syrian date"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 136,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "1 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 283,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/8",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "0.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "5.68%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Expand 1 thin bullet(s).",
+    "Work 5 converting term(s) into title/bullets: dates medjool organic, dates bulk, dates pitted, datiles, medjool dates.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Khodri Dates Resealable Pouch",
+   "short_name": "Leen Khodri Dates Resealable Pouch"
+  },
+  {
+   "asin": "B0C8ZDVHX3",
+   "title": "Zaitoune Turkish Delight Mix - 9 oz | Luxury Coatings of Pomegranate, Pistachio, Coconut, Kataifi & Rose | Authentic Lokum Sweet Assortment in a Beautiful Gift Tin | Handmade & Individually Wrapped",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 6403,
+   "cvr_pct": 6.92,
+   "buybox_pct": 99.6,
+   "total_sales": 10259.82,
+   "ad_sales": 5455.46,
+   "organic_sales": 4804.36,
+   "organic_pct": 46.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 27,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "turkish delights candy",
+    "chocolate candy",
+    "cookies",
+    "zaitoun ghraybeh",
+    "asian snacks",
+    "candy",
+    "chocolate assortment for women",
+    "chocolate gift",
+    "nougat",
+    "pistachio chocolate"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 197,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1549,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "46.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.92%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: turkish delights candy, chocolate candy, cookies, zaitoun ghraybeh, asian snacks.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Turkish Delight (Lokum) 250g",
+   "short_name": "Zaitoune Turkish Delight (Lokum) 250g"
+  },
+  {
+   "asin": "B0CN36JGLD",
+   "title": "Zaitoune Turkish Delight Mix - 22 oz | Luxury Coatings of Pomegranate, Pistachio, Coconut, Kataifi & Rose | Authentic Lokum Sweet Assortment in a Beautiful Gift Tin | Handmade & Individually Wrapped",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 1150,
+   "cvr_pct": 2.35,
+   "buybox_pct": 99.3,
+   "total_sales": 1416.48,
+   "ad_sales": 776.05,
+   "organic_sales": 640.43,
+   "organic_pct": 45.2,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 13,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "zaitoune turkish delight lokum - 250g 3 flavors",
+    "dubai chocolate",
+    "authentic dubai chocolate bar",
+    "baklava",
+    "chocolate",
+    "chocolate candy",
+    "chocolate candy variety pack",
+    "dulce arabe organic",
+    "halal snack box"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 198,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1994,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "45.2%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "2.35%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, zaitoune turkish delight lokum - 250g 3 flavors, dubai chocolate, authentic dubai chocolate bar, baklava.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Turkish Delight (Lokum) 650g",
+   "short_name": "Zaitoune Turkish Delight (Lokum) 650g"
+  },
+  {
+   "asin": "B0D9MPFNP8",
+   "title": "Zaitoune Ghraybeh Cookies - 9 oz | Traditional Middle Eastern Pistachio Shortbreads Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect for Dessert | Great Sharing Present",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 797,
+   "cvr_pct": 4.77,
+   "buybox_pct": 99.7,
+   "total_sales": 963.62,
+   "ad_sales": 570.88,
+   "organic_sales": 392.74,
+   "organic_pct": 40.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 27,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "maamoul cookies",
+    "halal snack box",
+    "maamoul",
+    "medjool dates treat box",
+    "zaitoun date maamoul",
+    "french cookies",
+    "ghorabieh",
+    "greek cookies",
+    "lebanese cookies",
+    "moroccan cakes"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 181,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 22,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1226,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "40.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "4.77%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: maamoul cookies, halal snack box, maamoul, medjool dates treat box, zaitoun date maamoul.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Shortbread (Ghraybeh) 250g",
+   "short_name": "Zaitoune Shortbread (Ghraybeh) 250g"
+  },
+  {
+   "asin": "B0DL3M8H42",
+   "title": "Zaitoune Pomegranate Covered Turkish Delight - 9 oz | Stuffed with Pistachios & Cashews | Coated with Dried Pomegranate Seeds | Authentic Lokum Sweets in a Gift Tin | Handmade & Individually Wrapped",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 1313,
+   "cvr_pct": 2.44,
+   "buybox_pct": 99.8,
+   "total_sales": 722.88,
+   "ad_sales": 478.73,
+   "organic_sales": 244.15,
+   "organic_pct": 33.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 9,
+   "missing_terms": [
+    "british foods and grocery",
+    "chocolate",
+    "dubai chocolate",
+    "dubai chocolate kit",
+    "french snacks",
+    "french sweet treats for women"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 198,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1994,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "3/9",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "33.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "2.44%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: british foods and grocery, chocolate, dubai chocolate, dubai chocolate kit, french snacks.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Turkish Delight Pomegranate Individually Wrapped - 250g (Amazon)",
+   "short_name": "Zaitoune Turkish Delight Pomegranate\u2026"
+  },
+  {
+   "asin": "B0CN3F8873",
+   "title": "Zaitoune Cashew & Pistachio Baklava Selection Box - 2.2 lb | Traditional Luxury Honey Pastry | Arabic Dessert with Authentic flavors in Beautiful Packaging | Handmade in Turkey",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 500,
+   "cvr_pct": 1.6,
+   "buybox_pct": 95.5,
+   "total_sales": 619.92,
+   "ad_sales": 331.53,
+   "organic_sales": 288.39,
+   "organic_pct": 46.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 27,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun turkish delight",
+    "zaitoun ghraybeh",
+    "baklava greek pastry",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "walnut free baklava",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 176,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 203,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "46.5%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "1.6%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun turkish delight, zaitoun ghraybeh, baklava greek pastry, halal snack box, maamoul.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava 1000g",
+   "short_name": "Zaitoune Baklava 1000g"
+  },
+  {
+   "asin": "B0055HNI7U",
+   "title": "Zaitoune Cashew & Pistachio Baklava Selection Box - 1.1 lb | Traditional Luxury Honey Pastry | Arabic Dessert with Authentic flavors in Beautiful Packaging | Handmade in Turkey",
+   "grade": "needs work",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 211,
+   "cvr_pct": 6.16,
+   "buybox_pct": 94.3,
+   "total_sales": 508.62,
+   "ad_sales": 282.13,
+   "organic_sales": 226.49,
+   "organic_pct": 44.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "fancy cookies for tea party",
+    "gift basket",
+    "macarons",
+    "baklava greek pastry",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 176,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 575,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "44.5%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.16%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, fancy cookies for tea party, gift basket, macarons, baklava greek pastry.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava 500g",
+   "short_name": "Zaitoune Baklava 500g"
+  },
+  {
+   "asin": "B0DDZ7L4GW",
+   "title": "Zaitoune Mixed Chocolate & Lotus Petit Fours \u2013 12 oz | Gourmet Assorted Petit Fours Cakes with Pistachio | Luxury Chocolate-Covered Arabic Sweets in an Elegant Gift Box | Perfect for Sharing & Gifting",
+   "grade": "weak",
+   "score": 4.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 174,
+   "cvr_pct": 1.15,
+   "buybox_pct": 99.5,
+   "total_sales": 45.98,
+   "ad_sales": null,
+   "organic_sales": 45.98,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 0,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 200,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1637,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "0/7",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "1.15%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+.",
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, halal snack box, maamoul, maamoul cookies, medjool dates treat box.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Petit Four Chocolate - 350g",
+   "short_name": "Zaitoune Petit Four Chocolate - 350g"
+  },
+  {
+   "asin": "B0DTKNJMXX",
+   "title": "Reeq AlNahl Honey Tubes \u2013 100% Natural Mixed Honey Pack of 4 Tubes (25g Each) \u2013 Portable Pure Honey for Tea, Snacks, Travel & Lunchboxes",
+   "grade": "needs work",
+   "score": 5.0,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 133,
+   "cvr_pct": 3.76,
+   "buybox_pct": 100.0,
+   "total_sales": 75.7,
+   "ad_sales": 61.46,
+   "organic_sales": 14.24,
+   "organic_pct": 18.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 67,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "small pack honey"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 136,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 801,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/3",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "18.8%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "3.76%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: small pack honey.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Reeq Alnahl Honey Tubes Pack of 4 Tubes (25g Each) - 25g",
+   "short_name": "Reeq Alnahl Honey Tubes Pack of 4 Tubes\u2026"
+  },
+  {
+   "asin": "B0DTKPF957",
+   "title": "Reeq AlNahl Natural Pure Honey Sticks, 20 Count (7g Each)",
+   "grade": "needs work",
+   "score": 5.0,
+   "score_breakdown": [
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 30,
+   "cvr_pct": 0.0,
+   "buybox_pct": 100.0,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 57,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 7,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 716,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "0.0%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Lengthen title to \u226580 chars \u2014 unused indexable space.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Reeq Alnahl Honey Bee Spoon 20 Count (7g Each)",
+   "short_name": "Reeq Alnahl Honey Bee Spoon 20 Count (7g\u2026"
+  },
+  {
+   "asin": "B0CZ78CH61",
+   "title": "Zaitoune Date Cookies \u2013 Traditional Middle Eastern Date Filled Cookies with Pistachios, Pine Nuts & Cashews | Handmade Luxury Dessert from Turkey | Beautiful Eco-Friendly Gift Box \u2013 Perfect for Sharing & Gifting (18 oz)",
+   "grade": "needs work",
+   "score": 5.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "warn",
+     "earned": 0.5
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 106,
+   "cvr_pct": 6.6,
+   "buybox_pct": 99.2,
+   "total_sales": 251.93,
+   "ad_sales": 98.97,
+   "organic_sales": 152.96,
+   "organic_pct": 60.7,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 0,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 219,
+     "verdict": "warn"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1184,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "0/7",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "60.7%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.6%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Trim title below 200 chars \u2014 it truncates in search.",
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, halal snack box, maamoul, maamoul cookies, medjool dates treat box.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Dates with Nuts (Tamriyah) 500g",
+   "short_name": "Zaitoune Dates with Nuts (Tamriyah) 500g"
+  },
+  {
+   "asin": "B0D9MR2KCS",
+   "title": "Zaitoune Ground Arabic Coffee Medium Roast with Cardamom - 9 oz | Beautifully Presented in a Luxury Gift Box | Suitable for Coffee Machines & Traditional Brewing Methods | Great Gift Idea",
+   "grade": "weak",
+   "score": 5.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    },
+    {
+     "check": "buy_box",
+     "weight": -1.0,
+     "verdict": "fail",
+     "earned": -1.0
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 3,
+   "sessions": 21,
+   "cvr_pct": 23.81,
+   "buybox_pct": 89.3,
+   "total_sales": 94.0,
+   "ad_sales": null,
+   "organic_sales": 94.0,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 0,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 187,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 3,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1063,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "0/7",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "23.81%",
+     "verdict": "pass"
+    },
+    {
+     "check": "buy_box",
+     "standard": "\u226590.0%",
+     "value": "89.3%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+.",
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, halal snack box, maamoul, maamoul cookies, medjool dates treat box.",
+    "Buy box below target \u2014 price/stock issue suppresses everything else."
+   ],
+   "name": "Zaitoune Coffee With Cardamom 250g",
+   "short_name": "Zaitoune Coffee With Cardamom 250g"
+  },
+  {
+   "asin": "B0D9MN2544",
+   "title": "Zaitoune Barazek Cookies - 250 g | Luxurious Crunchy Sesame & Pistachio Biscuits Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect for Coffee or Tea | Great Ramadan Sharing Present",
+   "grade": "needs work",
+   "score": 5.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 467,
+   "cvr_pct": 6.64,
+   "buybox_pct": 97.8,
+   "total_sales": 832.69,
+   "ad_sales": 77.97,
+   "organic_sales": 754.72,
+   "organic_pct": 90.6,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "lavender tea cookies",
+    "snacks variety pack for adults"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 192,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1226,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/3",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "90.6%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.64%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 2 converting term(s) into title/bullets: lavender tea cookies, snacks variety pack for adults.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Sesame Cookies (Barazek)",
+   "short_name": "Zaitoune Sesame Cookies (Barazek)"
+  },
+  {
+   "asin": "B0CDWMJ2KX",
+   "title": "Zaitoune Cashew & Pistachio Baklava Selection Box - 0.55 lb | Traditional Luxury Honey Pastry | Arabic Dessert with Authentic flavors in Beautiful Packaging | Handmade in Turkey",
+   "grade": "needs work",
+   "score": 5.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 160,
+   "cvr_pct": 8.75,
+   "buybox_pct": 92.2,
+   "total_sales": 388.56,
+   "ad_sales": null,
+   "organic_sales": 388.56,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 33,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "baklava greek pastry",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "walnut free baklava",
+    "zaitoun date maamoul",
+    "snacks"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 177,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 742,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/15",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "8.75%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: zaitoun ghraybeh, baklava greek pastry, halal snack box, maamoul, maamoul cookies.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava 250g",
+   "short_name": "Zaitoune Baklava 250g"
+  },
+  {
+   "asin": "B092W954B4",
+   "title": "Leen Sesame with Black Seeds Dates Rings Maamoul with Sesame & Black Seeds, Traditional Arabic Cookies \u2013 260g | Crunchy Pastry Filled with Sweet Date Filling",
+   "grade": "needs work",
+   "score": 5.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 217,
+   "cvr_pct": 4.61,
+   "buybox_pct": 98.8,
+   "total_sales": 158.3,
+   "ad_sales": 61.16,
+   "organic_sales": 97.14,
+   "organic_pct": 61.4,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 0,
+   "n_signal_terms": 1,
+   "missing_terms": [
+    "sasame seeds organic with sweet"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 157,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 246,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "0/1",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "61.4%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "4.61%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: sasame seeds organic with sweet.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Maamoul Date Rings With Sesame and Black Seeds - 260g",
+   "short_name": "Leen Maamoul Date Rings With Sesame and\u2026"
+  },
+  {
+   "asin": "B0C8ZFK2JQ",
+   "title": "Zaitoune Deluxe Mix Pistachio Baklawa with Honey - 1000g (35 oz) | Luxury Pastry Assortment | Arabic Dessert with Authentic flavors in Beautiful Gift Packaging | Traditional Recipe & Handmade in Turkey",
+   "grade": "needs work",
+   "score": 6.0,
+   "score_breakdown": [
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "warn",
+     "earned": 0.5
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 33,
+   "cvr_pct": 0.0,
+   "buybox_pct": 100.0,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 201,
+     "verdict": "warn"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1625,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "0.0%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Trim title below 200 chars \u2014 it truncates in search.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Deluxe Mix Pistachio Baklawa with Honey - 1000g (35 oz) | Luxury Pastry Assortment | Arabic Dessert with Authentic flavors in Beautiful Gift Packaging | Traditional Recipe & Handmade in Turkey",
+   "short_name": "Zaitoune Deluxe Mix Pistachio Baklawa\u2026"
+  },
+  {
+   "asin": "B092W6YGLT",
+   "title": "Leen Vegan Dates Biscuits 400 g, Arabic Cookies \u2013 400g | Plant-Based Cookies Made with Date Filling | Chewy Texture & Caramel-Like Sweetness",
+   "grade": "needs work",
+   "score": 6.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 2,
+   "fails": 1,
+   "sessions": 446,
+   "cvr_pct": 6.28,
+   "buybox_pct": 99.2,
+   "total_sales": 503.72,
+   "ad_sales": 334.81,
+   "organic_sales": 168.91,
+   "organic_pct": 33.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 55,
+   "n_signal_terms": 11,
+   "missing_terms": [
+    "japanese tea biscuits",
+    "maamoul date cookies",
+    "vegan desserts",
+    "vegan english cookies",
+    "vegan snacks"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 140,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 516,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "6/11",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "33.5%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.28%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: japanese tea biscuits, maamoul date cookies, vegan desserts, vegan english cookies, vegan snacks.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Vegan Date Biscuits With Caramel - 400g",
+   "short_name": "Leen Vegan Date Biscuits With Caramel\u2026"
+  },
+  {
+   "asin": "B0DL3NQSM6",
+   "title": "Zaitoune Rose Covered Turkish Delight - 9 oz | Stuffed with Pistachios & Cashews | Coated with Dried Rose Petals | Authentic Luxury Lokum Sweets in Beautiful Gift Tin | Handmade, Individually Wrapped",
+   "grade": "needs work",
+   "score": 6.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 2,
+   "fails": 1,
+   "sessions": 381,
+   "cvr_pct": 4.2,
+   "buybox_pct": 99.5,
+   "total_sales": 382.64,
+   "ad_sales": 218.72,
+   "organic_sales": 163.92,
+   "organic_pct": 42.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 67,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "chocolate bon bons"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 199,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 23,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1994,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/3",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "42.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "4.2%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: chocolate bon bons.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Turkish Delight (Lokum) 250g",
+   "short_name": "Zaitoune Turkish Delight (Lokum) 250g"
+  },
+  {
+   "asin": "B0895NM9ND",
+   "title": "Leen Golden Mix Premium Dates \u2013 Ajwa, Safawi, Sagaie, Khodhri & Mabroom | Resealable Zipper Pouch | Luxury Mixed Saudi Dates from Al-Madinah Al-Munawarah | Natural & Nutritious (250 g)",
+   "grade": "needs work",
+   "score": 6.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 2,
+   "fails": 1,
+   "sessions": 240,
+   "cvr_pct": 7.92,
+   "buybox_pct": 98.9,
+   "total_sales": 284.06,
+   "ad_sales": 134.92,
+   "organic_sales": 149.14,
+   "organic_pct": 52.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 67,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "dates pitted"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 184,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 326,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/3",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "52.5%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.92%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: dates pitted.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Golden Mix Dates From Madinah Palm - 250g",
+   "short_name": "Leen Golden Mix Dates From Madinah Palm\u2026"
+  },
+  {
+   "asin": "B0CQYSCJHD",
+   "title": "RIBAL Portable Travel Bidet Bottle \u2013 600ml Foldable Handheld Bidet Sprayer Shattaf| Leak-Proof, Compact & Eco-Friendly Personal Hygiene for Home, Office & Travel",
+   "grade": "needs work",
+   "score": 6.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 2,
+   "fails": 1,
+   "sessions": 81,
+   "cvr_pct": 3.7,
+   "buybox_pct": 100.0,
+   "total_sales": 73.72,
+   "ad_sales": 48.73,
+   "organic_sales": 24.99,
+   "organic_pct": 33.9,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 50,
+   "n_signal_terms": 2,
+   "missing_terms": [
+    "portable bidet travel large capacity 450ml"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 161,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 537,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/2",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "33.9%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "3.7%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: portable bidet travel large capacity 450ml.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Ribal Portable Foldable Spray Shattaf - 600ml",
+   "short_name": "Ribal Portable Foldable Spray Shattaf\u2026"
+  },
+  {
+   "asin": "B07VM6PX8B",
+   "title": "LEEN Premium Ajwa Dates \u2013Resealable Zipper Pouch | Fresh Authentic Ajwa from Al-Madinah Al-Munawarah | Natural, Soft & Rich Flavor | Premium Saudi Dates",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 313,
+   "cvr_pct": 10.54,
+   "buybox_pct": 98.5,
+   "total_sales": 885.33,
+   "ad_sales": 447.81,
+   "organic_sales": 437.52,
+   "organic_pct": 49.4,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 36,
+   "n_signal_terms": 11,
+   "missing_terms": [
+    "organic ajwa dates",
+    "dates pitted",
+    "sukkari dates",
+    "ajwa dates organic",
+    "jowar mamra small size",
+    "luxury dates",
+    "organic ajwa dates from madina"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 152,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 520,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/11",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "49.4%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "10.54%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: organic ajwa dates, dates pitted, sukkari dates, ajwa dates organic, jowar mamra small size."
+   ],
+   "name": "Leen Ajwa Dates From Madinah Resealable Pouch",
+   "short_name": "Leen Ajwa Dates From Madinah Resealable\u2026"
+  },
+  {
+   "asin": "B0CZ9CNH68",
+   "title": "Zaitoune Ghraybeh Cookies - 1.1 lb | Luxurious Traditional Middle Eastern Pistachio Shortbreads Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect for Dessert | Great Sharing Present",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 99,
+   "cvr_pct": 11.11,
+   "buybox_pct": 94.7,
+   "total_sales": 406.89,
+   "ad_sales": 175.95,
+   "organic_sales": 230.94,
+   "organic_pct": 56.8,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 29,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 193,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1226,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/7",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "56.8%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "11.11%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: halal snack box, maamoul, maamoul cookies, medjool dates treat box, zaitoun date maamoul."
+   ],
+   "name": "Zaitoune Shortbread (Ghraybeh) 500g",
+   "short_name": "Zaitoune Shortbread (Ghraybeh) 500g"
+  },
+  {
+   "asin": "B0CYSPBVNH",
+   "title": "BAL Coffee Alternative Datespresso - 12 oz /340 g | Caffeine-Free & Vegan-Friendly | Espresso Substitute Brews & Tastes like Original | Smooth Grind Crafted from Date Seeds | Rich & Smooth flavor",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 75,
+   "cvr_pct": 8.0,
+   "buybox_pct": 99.0,
+   "total_sales": 161.94,
+   "ad_sales": 135.95,
+   "organic_sales": 25.99,
+   "organic_pct": 16.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 5,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 195,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1959,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/5",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "16.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "8.0%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "BAL Coffee DateSpresso Roasted Date - 340g",
+   "short_name": "BAL Coffee DateSpresso Roasted Date - 340g"
+  },
+  {
+   "asin": "B0GL545NDW",
+   "title": "LEEN Premium Golden Mix Dates from Madinah, Saudi Arabia \u2013 Ajwa, Safawi, Sagaie, Khodhri & Mabroom | Arabian Oasis Gift Can | Handpicked Assorted Dates | Natural & Fresh | 220g",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 172,
+   "cvr_pct": 2.33,
+   "buybox_pct": 98.0,
+   "total_sales": 111.96,
+   "ad_sales": 93.95,
+   "organic_sales": 18.01,
+   "organic_pct": 16.1,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 3,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 176,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 15,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 701,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "3/3",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "16.1%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "2.33%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Golden Mix Dates From Madinah Oasis - 220g",
+   "short_name": "Leen Golden Mix Dates From Madinah Oasis\u2026"
+  },
+  {
+   "asin": "B07VM7828M",
+   "title": "Leen Khodhri Dates Resealable Zipper Pouch | Naturally Sweet with Rich, Traditional Taste | Authentic Saudi Dates | 100% Natural (400 g)",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 2,
+   "sessions": 40,
+   "cvr_pct": 7.5,
+   "buybox_pct": 100.0,
+   "total_sales": 67.82,
+   "ad_sales": null,
+   "organic_sales": 67.82,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 136,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "1 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 283,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.5%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add 1 bullet(s) \u2014 lost keyword surface.",
+    "Expand 1 thin bullet(s).",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Khodri Dates Resealable Pouch",
+   "short_name": "Leen Khodri Dates Resealable Pouch"
+  },
+  {
+   "asin": "B0GL4HYHH3",
+   "title": "LEEN Premium Mixed Dates from Madinah, Saudi Arabia \u2013 Ajwa, Safawi, Sagaie, Khodhri & Mabroom | Gift Heart Tin Box | Assorted Dates | Natural & Fresh | 200g",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 81,
+   "cvr_pct": 2.47,
+   "buybox_pct": 96.4,
+   "total_sales": 53.98,
+   "ad_sales": 116.95,
+   "organic_sales": 0.0,
+   "organic_pct": 0.0,
+   "attribution_mismatch": true,
+   "keyword_coverage_pct": 75,
+   "n_signal_terms": 4,
+   "missing_terms": [
+    "halawi dates"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 156,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 504,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "3/4",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "0.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "2.47%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: halawi dates.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Golden Mix Dates From Madinah Heart Tin Box - 200g",
+   "short_name": "Leen Golden Mix Dates From Madinah Heart\u2026"
+  },
+  {
+   "asin": "B0GL8V5MWL",
+   "title": "LEEN Premium Ajwa Dates \u2013Resealable Zipper Pouch | Fresh Authentic Ajwa from Al-Madinah Al-Munawarah | Natural, Soft & Rich Flavor | Premium Saudi Dates",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 80,
+   "cvr_pct": 5.0,
+   "buybox_pct": 97.7,
+   "total_sales": 39.96,
+   "ad_sales": 29.97,
+   "organic_sales": 9.99,
+   "organic_pct": 25.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 1,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 152,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 520,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/1",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "25.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "5.0%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Leen Ajwa Dates From Madinah Resealable Pouch",
+   "short_name": "Leen Ajwa Dates From Madinah Resealable\u2026"
+  },
+  {
+   "asin": "B0CQN6ZV1L",
+   "title": "Zaitoune Pistachio & Shkor Honey Baklava - 18 oz | Traditional Recipe Luxury Honey | Arabic Dessert with Authentic flavors in Beautiful Reusable Gift Tin | Great Sharing Present",
+   "grade": "needs work",
+   "score": 6.3,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 74,
+   "cvr_pct": 0.0,
+   "buybox_pct": 93.8,
+   "total_sales": null,
+   "ad_sales": 124.95,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 40,
+   "n_signal_terms": 5,
+   "missing_terms": [
+    "zaitoun turkish delight",
+    "snacks",
+    "zaitoun turkish delight mix"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 177,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 12,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1304,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/5",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "0.0%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 3 converting term(s) into title/bullets: zaitoun turkish delight, snacks, zaitoun turkish delight mix.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Baklava with Honey Special Edition (Kol Shkor) 500g",
+   "short_name": "Zaitoune Baklava with Honey Special\u2026"
+  },
+  {
+   "asin": "B0D9MQDX65",
+   "title": "Zaitoune Mixed Cookies Gift Box - 18 oz | Luxury Arabic Mini Cookie Assortment - Date Maamoul, Barazek & Ghraybeh | Handmade with Dates, Sesame & Pistachio",
+   "grade": "needs work",
+   "score": 6.4,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 12,
+   "cvr_pct": 8.33,
+   "buybox_pct": 93.3,
+   "total_sales": 34.99,
+   "ad_sales": null,
+   "organic_sales": 34.99,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 155,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 1,
+     "verdict": "fail"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 16,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 212,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "8.33%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add 4 bullet(s) \u2014 lost keyword surface.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Mixed Cookies Maamoul Date, Barazek and Graybah - 500g",
+   "short_name": "Zaitoune Mixed Cookies Maamoul Date\u2026"
+  },
+  {
+   "asin": "B0FDCY8ZJS",
+   "title": "Crush Pistachio Kunafa Cream Spread \u2013 Authentic Dubai Chocolate Filling \u2013 Viral Dessert Ingredient Pure Pistachio Paste & Toasted Kataifi \u2013 200g Jar",
+   "grade": "needs work",
+   "score": 6.4,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 2,
+   "sessions": 55,
+   "cvr_pct": 1.82,
+   "buybox_pct": 96.5,
+   "total_sales": 19.99,
+   "ad_sales": null,
+   "organic_sales": 19.99,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 148,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 26,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1621,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "1.82%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Add 1 bullet(s) \u2014 lost keyword surface.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Crush Pistachio Kunafa Cream Spread - 200g",
+   "short_name": "Crush Pistachio Kunafa Cream Spread - 200g"
+  },
+  {
+   "asin": "B092W6Y79V",
+   "title": "Leen Whole Wheat Dates Maamoul 240, Traditional Arabic Cookies \u2013 240g | Baked Pastry with Natural Date Filling | Rich Nutty Flavor & Soft Crumbly Texture",
+   "grade": "needs work",
+   "score": 6.6,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 229,
+   "cvr_pct": 13.1,
+   "buybox_pct": 98.9,
+   "total_sales": 517.2,
+   "ad_sales": 452.05,
+   "organic_sales": 65.15,
+   "organic_pct": 12.6,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 44,
+   "n_signal_terms": 9,
+   "missing_terms": [
+    "amagura amazake japanese oatmeal cookies",
+    "galletas de trigo integral sin azucar",
+    "irish biscuits",
+    "shortbread biscuits tin",
+    "\u0645\u0639\u0645\u0648\u0644 \u0627\u0644\u0633\u0644\u0637\u0627\u0646"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 153,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 494,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/9",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "12.6%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "13.1%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: amagura amazake japanese oatmeal cookies, galletas de trigo integral sin azucar, irish biscuits, shortbread biscuits tin, \u0645\u0639\u0645\u0648\u0644 \u0627\u0644\u0633\u0644\u0637\u0627\u0646.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend."
+   ],
+   "name": "Leen Whole Wheat Date Maamoul Healthier Dessert - 240g",
+   "short_name": "Leen Whole Wheat Date Maamoul Healthier\u2026"
+  },
+  {
+   "asin": "B0GL935GBB",
+   "title": "LEEN Premium Ajwa Dates \u2013Resealable Zipper Pouch | Fresh Authentic Ajwa from Al-Madinah Al-Munawarah | Natural, Soft & Rich Flavor | Premium Saudi Dates",
+   "grade": "needs work",
+   "score": 6.6,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 273,
+   "cvr_pct": 12.09,
+   "buybox_pct": 99.7,
+   "total_sales": 493.17,
+   "ad_sales": 448.76,
+   "organic_sales": 44.41,
+   "organic_pct": 9.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 44,
+   "n_signal_terms": 9,
+   "missing_terms": [
+    "bam mazafati dates organic",
+    "aduwa date",
+    "ajwa dates organic",
+    "sukkari dates organic",
+    "whole ajwa al medina dates"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 152,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 14,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 520,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/9",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "9.0%",
+     "verdict": "fail"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "12.09%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: bam mazafati dates organic, aduwa date, ajwa dates organic, sukkari dates organic, whole ajwa al medina dates.",
+    "Ad-dependent \u2014 organic rank is not carrying this ASIN; fix copy/keywords before scaling spend."
+   ],
+   "name": "Leen Ajwa Dates From Madinah Resealable Pouch",
+   "short_name": "Leen Ajwa Dates From Madinah Resealable\u2026"
+  },
+  {
+   "asin": "B0D9K4XNMT",
+   "title": "Zaitoune Pistachio Mabrumah Baklava \u2013 Authentic Middle Eastern Dessert | Premium Gift Box with Rich Pistachio Filling & Crispy Kataifi Layers | Handmade Luxury Arabic Sweet \u2013 Perfect for Sharing & Gifting (18 oz)",
+   "grade": "needs work",
+   "score": 6.8,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "warn",
+     "earned": 0.5
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 115,
+   "cvr_pct": 10.43,
+   "buybox_pct": 99.3,
+   "total_sales": 599.88,
+   "ad_sales": 74.98,
+   "organic_sales": 524.9,
+   "organic_pct": 87.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 17,
+   "n_signal_terms": 12,
+   "missing_terms": [
+    "zaitoun turkish delight",
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "sesame pistachio cookies",
+    "zaitoun date maamoul",
+    "snacks",
+    "zaitoun turkish delight mix"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 212,
+     "verdict": "warn"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1327,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/12",
+     "verdict": "fail"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "87.5%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "10.43%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Trim title below 200 chars \u2014 it truncates in search.",
+    "Work 5 converting term(s) into title/bullets: zaitoun turkish delight, zaitoun ghraybeh, halal snack box, maamoul, maamoul cookies."
+   ],
+   "name": "Zaitoune Baklava Rolls (Mabrouma) 500g",
+   "short_name": "Zaitoune Baklava Rolls (Mabrouma) 500g"
+  },
+  {
+   "asin": "B0DQ8S3XD9",
+   "title": "Milaf Date Cola - 8.1 fl oz | Sweet Carbonated Soda Soft Drink Made with Date Extract | Refreshing Non-Alcoholic Beverage | Ideal for Those Following Alcohol-Free Lifestyle (Pack of 24, Cola)",
+   "grade": "needs work",
+   "score": 7.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 728,
+   "cvr_pct": 7.42,
+   "buybox_pct": 95.8,
+   "total_sales": 3224.46,
+   "ad_sales": 1025.82,
+   "organic_sales": 2198.64,
+   "organic_pct": 68.2,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 62,
+   "n_signal_terms": 8,
+   "missing_terms": [
+    "bulk milf date coca cola",
+    "guarana soda",
+    "halal date soda"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 191,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 15,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1366,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "5/8",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "68.2%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.42%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 3 converting term(s) into title/bullets: bulk milf date coca cola, guarana soda, halal date soda.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Milaf Date Cola - 240ml",
+   "short_name": "Milaf Date Cola - 240ml"
+  },
+  {
+   "asin": "B0C8ZCDD2N",
+   "title": "Zaitoune Maamoul Date Cookies - 18 oz \u2013 Authentic Middle Eastern Sweets | Arabic Cookies with Dates \u2013 Premium Dessert Gifts in Elegant Tin",
+   "grade": "needs work",
+   "score": 7.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 681,
+   "cvr_pct": 4.41,
+   "buybox_pct": 97.6,
+   "total_sales": 1130.5,
+   "ad_sales": 315.42,
+   "organic_sales": 815.08,
+   "organic_pct": 72.1,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 60,
+   "n_signal_terms": 10,
+   "missing_terms": [
+    "zaitoun ghraybeh",
+    "halal snack box",
+    "medjool dates treat box",
+    "sesame pistachio cookies"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 138,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 598,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "6/10",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "72.1%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "4.41%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 4 converting term(s) into title/bullets: zaitoun ghraybeh, halal snack box, medjool dates treat box, sesame pistachio cookies.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Maamoul Date Cookies - 18 oz \u2013 Authentic Middle Eastern Sweets | Arabic Cookies with Dates \u2013 Premium Dessert Gifts in Elegant Tin",
+   "short_name": "Zaitoune Maamoul Date Cookies - 18 oz\u2026"
+  },
+  {
+   "asin": "B0CNP26N6Q",
+   "title": "Zaitoune Premium Mini Mixed Cookies - 9 oz | Bite-Sized Date Maamoul, Barazek & Ghraybeh Cookie Mix | Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect with Tea | Great Sharing Present",
+   "grade": "needs work",
+   "score": 7.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 396,
+   "cvr_pct": 7.32,
+   "buybox_pct": 98.5,
+   "total_sales": 771.31,
+   "ad_sales": 265.92,
+   "organic_sales": 505.39,
+   "organic_pct": 65.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 57,
+   "n_signal_terms": 7,
+   "missing_terms": [
+    "halal snack box",
+    "medjool dates treat box",
+    "sesame pistachio cookies"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 196,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 212,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/7",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "65.5%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.32%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 3 converting term(s) into title/bullets: halal snack box, medjool dates treat box, sesame pistachio cookies.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Mixed Cookies 250g",
+   "short_name": "Zaitoune Mixed Cookies 250g"
+  },
+  {
+   "asin": "B0CZ7DR3NJ",
+   "title": "Zaitoune Barazek Cookies - 18 oz | Luxurious Crunchy Sesame & Pistachio Cookies Handcrafted in Turkey | Beautiful Reusable Gift Tin | Perfect for Coffee or Tea | Great Sharing Present",
+   "grade": "needs work",
+   "score": 7.1,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 192,
+   "cvr_pct": 9.38,
+   "buybox_pct": 97.5,
+   "total_sales": 681.92,
+   "ad_sales": 156.95,
+   "organic_sales": 524.97,
+   "organic_pct": 77.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 44,
+   "n_signal_terms": 9,
+   "missing_terms": [
+    "halal snack box",
+    "maamoul",
+    "maamoul cookies",
+    "medjool dates treat box",
+    "zaitoun date maamoul"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 183,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1226,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "4/9",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "77.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "9.38%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: halal snack box, maamoul, maamoul cookies, medjool dates treat box, zaitoun date maamoul.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Sesame Cookies (Barazek)",
+   "short_name": "Zaitoune Sesame Cookies (Barazek)"
+  },
+  {
+   "asin": "B0DL3MB77J",
+   "title": "Zaitoune Pistachio Covered Turkish Delight \u2013 0.55 lb | Stuffed with Delicious Nuts, Coated with Chopped Pistachios | Authentic Luxury Lokum Turkish Delight Candy in a Beautiful Gift Tin | Handmade & Individually Wrapped | Perfect Turkish Snacks",
+   "grade": "needs work",
+   "score": 7.1,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "warn",
+     "earned": 0.5
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 234,
+   "cvr_pct": 4.7,
+   "buybox_pct": 98.9,
+   "total_sales": 273.64,
+   "ad_sales": null,
+   "organic_sales": 273.64,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 244,
+     "verdict": "warn"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 14,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1994,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "4.7%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Trim title below 200 chars \u2014 it truncates in search.",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Zaitoune Turkish Delight Pistachio Individually Wrapped - 250g (Amazon)",
+   "short_name": "Zaitoune Turkish Delight Pistachio\u2026"
+  },
+  {
+   "asin": "B0G3QHLNYN",
+   "title": "RIBAL Microfiber Cleaning Slippers \u2013 Wearable Mop Shoes Worn on the Feet, Reusable Hand-Washable Non-Slip Floor Cleaning Slippers for Hardwood & Tile",
+   "grade": "needs work",
+   "score": 7.2,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 2,
+   "fails": 1,
+   "sessions": 38,
+   "cvr_pct": 5.26,
+   "buybox_pct": 100.0,
+   "total_sales": 29.98,
+   "ad_sales": 14.99,
+   "organic_sales": 14.99,
+   "organic_pct": 50.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 1,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 149,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "2 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 636,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/1",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "50.0%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "5.26%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Expand 2 thin bullet(s).",
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Ribal Microfiber Cleaning Slippers One Size",
+   "short_name": "Ribal Microfiber Cleaning Slippers One\u2026"
+  },
+  {
+   "asin": "B0GL3H4QMX",
+   "title": "Leen Premium Sukkari Dates 110 g\u2013 Soft Naturally Sweet Saudi Arabian Dates, Fresh Whole Tamr Snack, No Added Sugar, High Fiber Energy Fruit",
+   "grade": "needs work",
+   "score": 7.6,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 2,
+   "fails": 0,
+   "sessions": 560,
+   "cvr_pct": 17.14,
+   "buybox_pct": 99.2,
+   "total_sales": 1237.94,
+   "ad_sales": 847.91,
+   "organic_sales": 390.03,
+   "organic_pct": 31.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 40,
+   "n_signal_terms": 15,
+   "missing_terms": [
+    "ajwa dates",
+    "dates medjool",
+    "premium orchard",
+    "chopped dates",
+    "dates medjool organic",
+    "datiles",
+    "medjool dates",
+    "medjool dates organic pitted",
+    "organik dates"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 139,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 412,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "6/15",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "31.5%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "17.14%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 5 converting term(s) into title/bullets: ajwa dates, dates medjool, premium orchard, chopped dates, dates medjool organic."
+   ],
+   "name": "Leen Sukkari Dates Resealable Pouch",
+   "short_name": "Leen Sukkari Dates Resealable Pouch"
+  },
+  {
+   "asin": "B0FZ4MJB7N",
+   "title": "Milaf Date Cola - 8.1 fl oz | Sweet Carbonated Soda Soft Drink Made with Date Extract | Refreshing Non-Alcoholic Beverage | Ideal for Those Following Alcohol-Free Lifestyle (Pack of 12)",
+   "grade": "needs work",
+   "score": 7.9,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 1,
+   "sessions": 128,
+   "cvr_pct": 6.25,
+   "buybox_pct": 96.5,
+   "total_sales": 341.77,
+   "ad_sales": null,
+   "organic_sales": 341.77,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 185,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1368,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "6.25%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Milaf Date Cola - 240ml",
+   "short_name": "Milaf Date Cola - 240ml"
+  },
+  {
+   "asin": "B0FZ4GCCW7",
+   "title": "Milaf Date Cola - 8.1 fl oz | Sweet Carbonated Soda Soft Drink Made with Date Extract | Refreshing Non-Alcoholic Beverage | Ideal for Those Following Alcohol-Free Lifestyle (Pack of 6, Cola)",
+   "grade": "needs work",
+   "score": 7.9,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 0,
+   "fails": 1,
+   "sessions": 83,
+   "cvr_pct": 7.23,
+   "buybox_pct": 96.6,
+   "total_sales": 179.94,
+   "ad_sales": null,
+   "organic_sales": 179.94,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 190,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1366,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.23%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "Milaf Date Cola - 240ml",
+   "short_name": "Milaf Date Cola - 240ml"
+  },
+  {
+   "asin": "B07VM77Q6J",
+   "title": "LEEN Safawi Dates Premium, 100% Natural & Hand-Picked Resealable Zipper Pouch | Soft, Naturally Sweet & Melt-in-Mouth | Authentic Dates from Al-Madinah Al-Munawarah (400 g)",
+   "grade": "needs work",
+   "score": 8.3,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 5,
+   "warns": 1,
+   "fails": 1,
+   "sessions": 63,
+   "cvr_pct": 14.29,
+   "buybox_pct": 98.6,
+   "total_sales": 205.76,
+   "ad_sales": null,
+   "organic_sales": 205.76,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 172,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "1 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 280,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "14.29%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Add 1 bullet(s) \u2014 lost keyword surface.",
+    "Expand 1 thin bullet(s)."
+   ],
+   "name": "Leen Safawi Dates Resealable Pouch",
+   "short_name": "Leen Safawi Dates Resealable Pouch"
+  },
+  {
+   "asin": "B0CYSKZDYH",
+   "title": "BAL Coffee Alternative Groundate - 12 oz /340 g | Caffeine-Free & Vegan-Friendly | Coffee Substitute Brews & Tastes like Original | Smooth Grind Crafted from Date Seeds | Rich & Smooth flavor",
+   "grade": "needs work",
+   "score": 8.4,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 6,
+   "warns": 0,
+   "fails": 1,
+   "sessions": 68,
+   "cvr_pct": 7.35,
+   "buybox_pct": 98.7,
+   "total_sales": 116.15,
+   "ad_sales": 41.28,
+   "organic_sales": 74.87,
+   "organic_pct": 64.5,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 2,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 191,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 24,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1959,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/2",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "64.5%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "7.35%",
+     "verdict": "fail"
+    }
+   ],
+   "actions": [
+    "Low session conversion \u2014 the listing, not the bid, is losing the sale."
+   ],
+   "name": "BAL Coffee Groundate Roasted  - 340g",
+   "short_name": "BAL Coffee Groundate Roasted - 340g"
+  },
+  {
+   "asin": "B07VM722CM",
+   "title": "Leen Premium Sukkari Dates 400 g \u2013 Soft Naturally Sweet Saudi Arabian Dates, Fresh Whole Tamr Snack, No Added Sugar, High Fiber Energy Fruit",
+   "grade": "strong",
+   "score": 8.7,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "warn",
+     "earned": 1.25
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 6,
+   "warns": 1,
+   "fails": 0,
+   "sessions": 180,
+   "cvr_pct": 24.44,
+   "buybox_pct": 99.5,
+   "total_sales": 998.57,
+   "ad_sales": 175.92,
+   "organic_sales": 822.65,
+   "organic_pct": 82.4,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 67,
+   "n_signal_terms": 3,
+   "missing_terms": [
+    "saudi fancy dry date sukari"
+   ],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 140,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 17,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 412,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "2/3",
+     "verdict": "warn"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "82.4%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "24.44%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [
+    "Work 1 converting term(s) into title/bullets: saudi fancy dry date sukari."
+   ],
+   "name": "Leen Sukkari Dates Resealable Pouch",
+   "short_name": "Leen Sukkari Dates Resealable Pouch"
+  },
+  {
+   "asin": "B0D6X6Z5GK",
+   "title": "BAL Coffee Alternative Eastern Brew - 12 oz /340 g | Caffeine-Free & Vegan-Friendly | Substitute Brews & Tastes like Original Coffee | Smooth Grind Crafted from Date Seeds | Rich & Smooth flavor",
+   "grade": "strong",
+   "score": 8.9,
+   "score_breakdown": [
+    {
+     "check": "keyword_coverage",
+     "weight": 2.5,
+     "verdict": "pass",
+     "earned": 2.5
+    },
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "warn",
+     "earned": 1.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 6,
+   "warns": 1,
+   "fails": 0,
+   "sessions": 18,
+   "cvr_pct": 11.11,
+   "buybox_pct": 100.0,
+   "total_sales": 53.98,
+   "ad_sales": 26.99,
+   "organic_sales": 26.99,
+   "organic_pct": 50.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": 100,
+   "n_signal_terms": 1,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 194,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1959,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "1/1",
+     "verdict": "pass"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "50.0%",
+     "verdict": "warn"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "11.11%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [],
+   "name": "BAL Coffee Eastern Brew - 340g",
+   "short_name": "BAL Coffee Eastern Brew - 340g"
+  },
+  {
+   "asin": "B0GL4RLRZ4",
+   "title": "Leen Golden Mix Premium Dates \u2013 Ajwa, Safawi, Sagaie, Khodhri & Mabroom | Resealable Zipper Pouch | Luxury Mixed Saudi Dates from Al-Madinah Al-Munawarah | Natural & Nutritious (250 g)",
+   "grade": "strong",
+   "score": 10.0,
+   "score_breakdown": [
+    {
+     "check": "organic_share",
+     "weight": 2.0,
+     "verdict": "pass",
+     "earned": 2.0
+    },
+    {
+     "check": "conversion_rate",
+     "weight": 1.5,
+     "verdict": "pass",
+     "earned": 1.5
+    },
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 6,
+   "warns": 0,
+   "fails": 0,
+   "sessions": 53,
+   "cvr_pct": 11.32,
+   "buybox_pct": 97.0,
+   "total_sales": 118.94,
+   "ad_sales": null,
+   "organic_sales": 118.94,
+   "organic_pct": 100.0,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 184,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 326,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    },
+    {
+     "check": "organic_share",
+     "standard": "majority of sales earned",
+     "value": "100.0%",
+     "verdict": "pass"
+    },
+    {
+     "check": "conversion_rate",
+     "standard": "\u226510.0% unit-session",
+     "value": "11.32%",
+     "verdict": "pass"
+    }
+   ],
+   "actions": [],
+   "name": "Leen Golden Mix Dates From Madinah Palm - 250g",
+   "short_name": "Leen Golden Mix Dates From Madinah Palm\u2026"
+  },
+  {
+   "asin": "B08DG295LF",
+   "title": "Pack of 2 Alkanater Tahina Extra Seame Paste 2 Lb (32 Oz)",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "fail",
+     "earned": 0.0
+    }
+   ],
+   "passes": 1,
+   "warns": 0,
+   "fails": 3,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 57,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 14,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Lengthen title to \u226580 chars \u2014 unused indexable space.",
+    "Add 5 bullet(s) \u2014 lost keyword surface.",
+    "Write a fuller description / A+ content."
+   ],
+   "name": "Pack of 2 Alkanater Tahina Extra Seame Paste 2 Lb (32 Oz)",
+   "short_name": "Pack of 2 Alkanater Tahina Extra Seame\u2026"
+  },
+  {
+   "asin": "B0CN3DGZRM",
+   "title": "Zaitoune Ground Arabic Coffee Medium Roast with Extra Cardamom - 9 oz | Beautifully Presented in a Luxury Gift Box | Suitable for Coffee Machines & Traditional Brewing Methods | Made in Turkey",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 1,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 192,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 3,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1063,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+."
+   ],
+   "name": "Zaitoune Coffee With Cardamom extra 250g",
+   "short_name": "Zaitoune Coffee With Cardamom extra 250g"
+  },
+  {
+   "asin": "B0D9P2SDQ8",
+   "title": "Zaitoune Ground Arabic Coffee Medium Roast with Cardamom - 18 oz | Beautifully Presented in a Luxury Gift Box | Suitable for Coffee Machines & Traditional Brewing Methods | Great Gift Idea",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 1,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 188,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 3,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1750,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+."
+   ],
+   "name": "Zaitoune Coffee With Cardamom 500g",
+   "short_name": "Zaitoune Coffee With Cardamom 500g"
+  },
+  {
+   "asin": "B0D9P43HZF",
+   "title": "Zaitoune Ground Arabic Coffee Dark Medium Roast with Extra Cardamom - 9 oz | Beautifully Presented in a Luxury Gift Box | Suitable for Coffee Machines & Traditional Brewing Methods | Made in Turkey",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 1,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 197,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 3,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1067,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+."
+   ],
+   "name": "Zaitoune Coffee With Cardamom extra 250g",
+   "short_name": "Zaitoune Coffee With Cardamom extra 250g"
+  },
+  {
+   "asin": "B0DDZ1PKYC",
+   "title": "Zaitoune Mixed Chocolate & Nescafe Royal Petit Fours \u2013 12 oz | Assorted Luxury Chocolate Covered Cookie Selection | Authentic Arabic Cookies in a Beautiful Gift Box | Great Sharing Present",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 0,
+   "fails": 1,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 188,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1503,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+."
+   ],
+   "name": "Zaitoune Petit Four Chocolate - 350g",
+   "short_name": "Zaitoune Petit Four Chocolate - 350g"
+  },
+  {
+   "asin": "B0DJWCXKZM",
+   "title": "Milaf Premium Sukari Dates - 9 oz | Fresh, Soft, Delicious & Juicy | Distinct Sweet Taste | No Additives or Preservatives | Ideal for Snacking or Cooking | Can Support a Healthy, Balanced Diet",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "fail",
+     "earned": 0.0
+    }
+   ],
+   "passes": 2,
+   "warns": 0,
+   "fails": 2,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 192,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 3,
+     "verdict": "fail"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add images to reach 6+.",
+    "Write a fuller description / A+ content."
+   ],
+   "name": "Milaf Premium Sukari Dates - 9 oz | Fresh, Soft, Delicious & Juicy | Distinct Sweet Taste | No Additives or Preservatives | Ideal for Snacking or Cooking | Can Support a Healthy, Balanced Diet",
+   "short_name": "Milaf Premium Sukari Dates - 9 oz |\u2026"
+  },
+  {
+   "asin": "B0DP7KPTRV",
+   "title": "Bab Sharqi Chocolate Covered Cashew & Pistachio Baklava Pastry Fingers - 350 g | Gourmet Middle Eastern Sweets Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "fail",
+     "earned": 0.0
+    }
+   ],
+   "passes": 2,
+   "warns": 0,
+   "fails": 2,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 199,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 15,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 0,
+     "verdict": "fail"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add 5 bullet(s) \u2014 lost keyword surface.",
+    "Write a fuller description / A+ content."
+   ],
+   "name": "Bab Sharqi Chocolate Covered Cashew & Pistachio Baklava Pastry Fingers - 350 g | Gourmet Middle Eastern Sweets Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "short_name": "Bab Sharqi Chocolate Covered Cashew &\u2026"
+  },
+  {
+   "asin": "B0DP7N14RH",
+   "title": "Bab Sharqi Pecan Baklava Pastry Rolls - 230 g | Gourmet Traditional Arabic Sweets Presented in a Beautiful Gift Box | Authentic Recipe & Handmade With Natural Ingredients | Perfect to Share",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 189,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 804,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Bab Sharqi Pecan Baklava Pastry Rolls - 230 g | Gourmet Traditional Arabic Sweets Presented in a Beautiful Gift Box | Authentic Recipe & Handmade With Natural Ingredients | Perfect to Share",
+   "short_name": "Bab Sharqi Pecan Baklava Pastry Rolls\u2026"
+  },
+  {
+   "asin": "B0DP7P5C4K",
+   "title": "Bab Sharqi Chocolate Covered Cookies - 8 oz | Gourmet Milk Chocolate Coated | Bakery-Style Cookies Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 187,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 12,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 789,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Bab Sharqi Chocolate Covered Cookies - 8 oz | Gourmet Milk Chocolate Coated | Bakery-Style Cookies Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "short_name": "Bab Sharqi Chocolate Covered Cookies - 8\u2026"
+  },
+  {
+   "asin": "B0DP7QMGN7",
+   "title": "Bab Sharqi Chocolate Covered Biscuits - 240 g | Gourmet White Chocolate Coated Cookies | Bakery-Style Biscuits Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 199,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 12,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 789,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Bab Sharqi Chocolate Covered Biscuits - 240 g | Gourmet White Chocolate Coated Cookies | Bakery-Style Biscuits Presented in a Beautiful Gift Box | Handmade With Natural Ingredients | Perfect to Share",
+   "short_name": "Bab Sharqi Chocolate Covered Biscuits\u2026"
+  },
+  {
+   "asin": "B0DQ59NKBY",
+   "title": "Crush Dubai Pecan Chocolate Bar \u2013 8 oz Luxury Gift, Filled with Toasted Katafi, Pecan Cream & Tahini, Inspired by the Classic Knafeh Dessert",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 140,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 21,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 822,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Crush Dubai Chocolate Bar - 210G",
+   "short_name": "Crush Dubai Chocolate Bar - 210G"
+  },
+  {
+   "asin": "B0DQ5D7DXV",
+   "title": "Crush Dubai Pistachio Pomegranate Chocolate Bar \u2013 7 oz Luxury Gift, Filled with Toasted Katafi, Pomegranate Cream & Tahini, Inspired by the Classic Knafeh Dessert",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 162,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 27,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 822,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Crush Dubai Chocolate Bar - 210G",
+   "short_name": "Crush Dubai Chocolate Bar - 210G"
+  },
+  {
+   "asin": "B0DQDK8PRJ",
+   "title": "Crush Dubai Pistachio Chocolate Bar \u2013 7 oz | Luxury Gift with Toasted Katafi, Pistachio Cream & Tahini | Inspired by Traditional Knafeh Dessert | Premium Dubai Chocolate Bar",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 173,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 822,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Crush Dubai Chocolate Bar - 210G",
+   "short_name": "Crush Dubai Chocolate Bar - 210G"
+  },
+  {
+   "asin": "B0DSWC88Y5",
+   "title": "Milaf Date Cola - 8.1 fl oz | Sweet Carbonated Soda Soft Drink Made with Date Extract | Refreshing Non-Alcoholic Beverage | Ideal for Those Following Alcohol-Free Lifestyle | (Single Can)",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 4,
+   "warns": 0,
+   "fails": 0,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 187,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 5,
+     "verdict": "pass"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 16,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 1368,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [],
+   "name": "Milaf Date Cola - 240ml",
+   "short_name": "Milaf Date Cola - 240ml"
+  },
+  {
+   "asin": "B0F5WWB6MN",
+   "title": "Zaitoune Turkish Delight Trio \u2013 Mix, Pistachio & Rose Coated Turkish Candies | Authentic Middle Eastern Sweets | 250g x 3 | Gourmet Gift Set",
+   "grade": "unrated",
+   "score": null,
+   "score_breakdown": [
+    {
+     "check": "title_length",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullets",
+     "weight": 1.0,
+     "verdict": "fail",
+     "earned": 0.0
+    },
+    {
+     "check": "images",
+     "weight": 1.0,
+     "verdict": "pass",
+     "earned": 1.0
+    },
+    {
+     "check": "bullet_depth",
+     "weight": 0.5,
+     "verdict": "warn",
+     "earned": 0.25
+    },
+    {
+     "check": "description",
+     "weight": 0.5,
+     "verdict": "pass",
+     "earned": 0.5
+    }
+   ],
+   "passes": 3,
+   "warns": 1,
+   "fails": 1,
+   "sessions": null,
+   "cvr_pct": null,
+   "buybox_pct": null,
+   "total_sales": null,
+   "ad_sales": null,
+   "organic_sales": null,
+   "organic_pct": null,
+   "attribution_mismatch": false,
+   "keyword_coverage_pct": null,
+   "n_signal_terms": 0,
+   "missing_terms": [],
+   "checks": [
+    {
+     "check": "title_length",
+     "standard": "80-200 chars",
+     "value": 140,
+     "verdict": "pass"
+    },
+    {
+     "check": "bullets",
+     "standard": "5 bullets",
+     "value": 4,
+     "verdict": "fail"
+    },
+    {
+     "check": "bullet_depth",
+     "standard": "\u2265100 chars each",
+     "value": "2 thin",
+     "verdict": "warn"
+    },
+    {
+     "check": "images",
+     "standard": "\u22656",
+     "value": 18,
+     "verdict": "pass"
+    },
+    {
+     "check": "description",
+     "standard": "\u2265200 chars",
+     "value": 600,
+     "verdict": "pass"
+    },
+    {
+     "check": "keyword_coverage",
+     "standard": "converting terms present in copy",
+     "value": "no signal",
+     "verdict": "n/a"
+    }
+   ],
+   "actions": [
+    "Add 1 bullet(s) \u2014 lost keyword surface.",
+    "Expand 2 thin bullet(s)."
+   ],
+   "name": "Zaitoune Turkish Delight (Lokum) 250g",
+   "short_name": "Zaitoune Turkish Delight (Lokum) 250g"
+  }
+ ]
+}

@@ -5,7 +5,7 @@ Every sales channel lives in Shopify (website, Walmart, Temu, TikTok Shop, …)
 except Amazon FBA. The existing shopify-sync collapses all of them into
 "website"; this records the channel dimension so /performance can split them.
 
-  shopify-channel-sales.py [--days 730]      # default 730 (2 years)
+  shopify-channel-sales.py [--days 60]       # rolling 60-day window; history accrues via upsert
 
 Table: shopify_channel_sales_daily(date, channel, product_handle, product_title, units, sales)
 Upsert-based; re-runs refresh the window and never drop older archived days.
@@ -14,7 +14,7 @@ import importlib.util, os, sys, json, subprocess
 from datetime import date, timedelta
 spec=importlib.util.spec_from_file_location("shop", os.path.expanduser("~/babanuj-ops/shopify-sync.py"))
 S=importlib.util.module_from_spec(spec); spec.loader.exec_module(S)
-DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 730
+DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 60  # rolling window; upserts accumulate history
 VPS="root@<vps-host>"; KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
 
 QUERY = """
