@@ -14,7 +14,7 @@
 #     DAYS      trailing window, default 14
 #     CHANNELS  comma list, default amazon_ads,meta,google,gsc,amazon_seller
 set -uo pipefail
-KEY="$HOME/.ssh/babanuj_deploy"; VPS="root@<vps-host>"; PORT=5544
+KEY="$HOME/.ssh/babanuj_deploy"; VPS="${BCC_VPS:-${BCC_VPS}}"; PORT=5544
 DAYS="${1:-14}"; CHANNELS="${2:-amazon_ads,meta,google,gsc,amazon_seller}"
 LOG="$HOME/babanuj-ops/marketing-sync.log"
 # launchd starts with a bare PATH — add where the channel CLIs live.

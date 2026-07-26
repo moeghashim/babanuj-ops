@@ -22,7 +22,7 @@ from datetime import date, timedelta
 spec=importlib.util.spec_from_file_location("audit", os.path.expanduser("~/babanuj-ops/amazon-ads-audit.py"))
 A=importlib.util.module_from_spec(spec); spec.loader.exec_module(A)
 DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 90
-VPS="root@<vps-host>"; KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
+VPS=os.environ.get("BCC_VPS","root@<vps-host>"); KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
 
 env=A.load_env(A.ENV); access=A.refresh_token(env)
 cid=env.get("AMAZON_ADS_API_CLIENT_ID") or env["AMAZON_ADS_CLIENT_ID"]

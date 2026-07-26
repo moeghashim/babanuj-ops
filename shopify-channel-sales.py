@@ -15,7 +15,7 @@ from datetime import date, timedelta
 spec=importlib.util.spec_from_file_location("shop", os.path.expanduser("~/babanuj-ops/shopify-sync.py"))
 S=importlib.util.module_from_spec(spec); spec.loader.exec_module(S)
 DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 60  # rolling window; upserts accumulate history
-VPS="root@<vps-host>"; KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
+VPS=os.environ.get("BCC_VPS","root@<vps-host>"); KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
 
 QUERY = """
 query($q: String!, $cursor: String) {

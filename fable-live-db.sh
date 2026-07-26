@@ -4,7 +4,7 @@
 # its docker-network IP and password over SSH each run, so restarts don't break it.
 #   source ~/babanuj-ops/fable-live-db.sh   # exports DATABASE_URL, opens tunnel
 set -e
-VPS="root@<vps-host>"; KEY="$HOME/.ssh/babanuj_deploy"; LPORT=15432
+VPS="${BCC_VPS:-${BCC_VPS}}"; KEY="$HOME/.ssh/babanuj_deploy"; LPORT=15432
 IP=$(ssh -i "$KEY" -o BatchMode=yes "$VPS" "docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' bcc-prod-postgres")
 PW=$(ssh -i "$KEY" -o BatchMode=yes "$VPS" "grep '^POSTGRES_PASSWORD=' /opt/babanuj-command-center/.env.production | cut -d= -f2-")
 pkill -f "ssh.*-L $LPORT:" 2>/dev/null || true

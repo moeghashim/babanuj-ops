@@ -20,7 +20,7 @@ from datetime import datetime, timedelta, timezone
 ENV = os.path.expanduser("~/.config/amazon-ads-pp-cli/.env")
 HOST = "https://advertising-api.amazon.com"
 TOKEN_URL = "https://api.amazon.com/auth/o2/token"
-VPS = "root@<vps-host>"
+VPS = os.environ.get("BCC_VPS","root@<vps-host>")
 KEY = os.path.expanduser("~/.ssh/babanuj_deploy")
 
 

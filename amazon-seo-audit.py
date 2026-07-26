@@ -30,7 +30,7 @@ from datetime import datetime, timezone, timedelta
 HOME = os.path.expanduser("~")
 OPS = f"{HOME}/babanuj-ops"
 OUTDIR = f"{OPS}/amazon-seo"
-VPS = "root@<vps-host>"
+VPS = os.environ.get("BCC_VPS","root@<vps-host>")
 KEY = f"{HOME}/.ssh/babanuj_deploy"
 MKT = "ATVPDKIKX0DER"
 

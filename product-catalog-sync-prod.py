@@ -16,7 +16,7 @@ babanuj_deploy SSH key + `docker exec psql`.
 import os, sys, json, re, subprocess, urllib.request, urllib.parse, gzip, time
 
 HOME = os.path.expanduser("~")
-VPS = "root@<vps-host>"
+VPS = os.environ.get("BCC_VPS","root@<vps-host>")
 KEY = f"{HOME}/.ssh/babanuj_deploy"
 MKT = "ATVPDKIKX0DER"
 ADS = "/private/tmp/claude-501/-Users-moeghashim-marketing/8cc4d981-9321-43a0-a641-daa0fa40ac24/scratchpad/amz-audit/productads.json"

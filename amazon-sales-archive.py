@@ -16,7 +16,7 @@ import json, os, subprocess, sys, time, gzip, urllib.request
 from collections import defaultdict
 from datetime import timedelta, datetime, timezone
 DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 90
-MKT="ATVPDKIKX0DER"; VPS="root@<vps-host>"; KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
+MKT="ATVPDKIKX0DER"; VPS=os.environ.get("BCC_VPS","root@<vps-host>"); KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
 
 def cli(args, inp=None, t=180):
     r=subprocess.run(["amazon-seller-pp-cli",*args,"--json","--no-input","--no-color"],

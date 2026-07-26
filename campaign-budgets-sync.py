@@ -13,7 +13,7 @@ for c in camps:
     if b is None: continue
     lines.append(f"update campaigns set daily_budget={float(b):.2f} where id='amazon_sp:{c['campaignId']}';"); n+=1
 lines.append("commit;")
-p=subprocess.run(["ssh","-i",os.path.expanduser("~/.ssh/babanuj_deploy"),"-o","BatchMode=yes","root@<vps-host>",
+p=subprocess.run(["ssh","-i",os.path.expanduser("~/.ssh/babanuj_deploy"),"-o","BatchMode=yes",os.environ.get("BCC_VPS","root@<vps-host>"),
                   "docker exec -i bcc-prod-postgres psql -U bcc -d bcc"],input="\n".join(lines),capture_output=True,text=True,timeout=180)
 if p.returncode!=0: print(p.stderr[-300:]); sys.exit(1)
 print(f"budgets synced for {n} campaigns")

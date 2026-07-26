@@ -43,7 +43,7 @@ for kind,_id,label,f,ov,nv in changes:
     lines.append(f"insert into campaign_change_log(observed_on,prev_snapshot,entity_type,entity_id,entity_label,field,old_value,new_value) "
                  f"values('{today}','{prev_day}','{kind}',{lit(_id)},{lit(label)},{lit(f)},{lit(ov)},{lit(nv)});")
 lines.append("commit;")
-p=subprocess.run(["ssh","-i",os.path.expanduser("~/.ssh/babanuj_deploy"),"-o","BatchMode=yes","root@<vps-host>",
+p=subprocess.run(["ssh","-i",os.path.expanduser("~/.ssh/babanuj_deploy"),"-o","BatchMode=yes",os.environ.get("BCC_VPS","root@<vps-host>"),
                   "docker exec -i bcc-prod-postgres psql -U bcc -d bcc"],input="\n".join(lines),capture_output=True,text=True,timeout=180)
 if p.returncode!=0: print(p.stderr[-300:]); sys.exit(1)
 print(f"snapshot {today} vs {prev_day}: {len(changes)} changes logged")

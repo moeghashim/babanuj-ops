@@ -5,7 +5,7 @@ queue table exists. Edits are applied back to intake.yaml by the Chief (git is
 the source of truth); this sync only publishes current values."""
 import subprocess, sys, os, json
 import yaml  # pyyaml via fable repo's node? no — use python yaml if present
-REPO=os.path.expanduser("~/marketing"); VPS="root@<vps-host>"; KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
+REPO=os.path.expanduser("~/marketing"); VPS=os.environ.get("BCC_VPS","root@<vps-host>"); KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
 GROUPS = [  # (group label, [key prefixes/paths])
  ("Targets & anchors", ["margin_percent","break_even_acos","target_acos","target_tacos"]),
  ("Budgets", ["monthly_budget","amazon.new_campaign_daily_budget_usd"]),
