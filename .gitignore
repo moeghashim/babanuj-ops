@@ -29,3 +29,6 @@ __pycache__/
 
 # Binaries — add deliberately after a look (design docs may embed account/app IDs)
 *.pdf
+
+# Cloudflare CLI cache (contains account id)
+.wrangler/
