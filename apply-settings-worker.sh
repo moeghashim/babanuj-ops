@@ -3,7 +3,7 @@
 # bcc, validate+apply via `fable setup --set` (schema-enforced), make verify,
 # commit signed-off to main, mark applied/rejected, resync the page.
 set -eu
-REPO="$HOME/marketing"; VPS="${BCC_VPS:-${BCC_VPS}}"; KEY="$HOME/.ssh/babanuj_deploy"
+REPO="$HOME/marketing"; VPS="${BCC_VPS:?BCC_VPS is required}"; KEY="${BCC_SSH_KEY:-$HOME/.ssh/babanuj_deploy}"
 LOG="$HOME/babanuj-ops/logs/apply-settings.log"; mkdir -p "$HOME/babanuj-ops/logs"
 psqlc(){ ssh -i "$KEY" -o BatchMode=yes "$VPS" "docker exec -i bcc-prod-postgres psql -U bcc -d bcc -tA" ; }
 {

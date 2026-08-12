@@ -14,7 +14,7 @@
 #     DAYS      trailing window, default 14
 #     CHANNELS  comma list, default amazon_ads,meta,google,gsc,amazon_seller
 set -uo pipefail
-KEY="$HOME/.ssh/babanuj_deploy"; VPS="${BCC_VPS:-${BCC_VPS}}"; PORT=5544
+KEY="${BCC_SSH_KEY:-$HOME/.ssh/babanuj_deploy}"; VPS="${BCC_VPS:?BCC_VPS is required}"; PORT=5544
 DAYS="${1:-14}"; CHANNELS="${2:-amazon_ads,meta,google,gsc,amazon_seller}"
 LOG="$HOME/babanuj-ops/marketing-sync.log"
 # launchd starts with a bare PATH — add where the channel CLIs live.
@@ -37,4 +37,6 @@ trap '[ -n "${TUN:-}" ] && kill "$TUN" 2>/dev/null' EXIT
 cd "$HOME/babanuj-ops" || exit 1
 DATABASE_URL="postgres://bcc:${PW}@127.0.0.1:${PORT}/bcc" \
   python3 posthog-marketing-sync.py --days "$DAYS" --channels "$CHANNELS" --verbose
-echo "----- exit $? at $(date '+%F %T') -----"
+rc=$?
+echo "----- exit $rc at $(date '+%F %T') -----"
+exit "$rc"
