@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.babanuj.campaign-changelog</string>
+  <key>ProgramArguments</key><array>
+    <string>/Users/moeghashim/babanuj-ops/bin/run-sync.sh</string><string>campaign-change-log.py</string>
+  </array>
+  <key>StandardErrorPath</key><string>/Users/moeghashim/babanuj-ops/logs/campaign-changelog.log</string>
+  <key>StandardOutPath</key><string>/Users/moeghashim/babanuj-ops/logs/campaign-changelog.log</string>
+  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>45</integer></dict>
+</dict></plist>

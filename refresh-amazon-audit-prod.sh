@@ -11,8 +11,8 @@
 set -euo pipefail
 
 OPS="$HOME/babanuj-ops"
-VPS="${BCC_VPS:-${BCC_VPS}}"
-KEY="$HOME/.ssh/babanuj_deploy"
+VPS="${BCC_VPS:?BCC_VPS is required}"
+KEY="${BCC_SSH_KEY:-$HOME/.ssh/babanuj_deploy}"
 LOG="$OPS/logs/amazon-audit.log"
 mkdir -p "$OPS/logs" "$OPS/amazon-ads"
 
