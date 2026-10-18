@@ -17,22 +17,61 @@ Tables (created on demand, in prod bcc):
   amazon_ad_daily(asin, date, spend, sales, orders, clicks, impressions)
   amazon_campaign_daily(campaign_id, date, spend, sales, orders, clicks, impressions)
 """
-import importlib.util, os, sys, json, time, gzip, subprocess, urllib.request, urllib.error
+import argparse, importlib.util, os, sys, json, time, gzip, subprocess, urllib.request, urllib.error
 from datetime import date, timedelta
 spec=importlib.util.spec_from_file_location("audit", os.path.expanduser("~/babanuj-ops/amazon-ads-audit.py"))
 A=importlib.util.module_from_spec(spec); spec.loader.exec_module(A)
-DAYS=int(sys.argv[sys.argv.index("--days")+1]) if "--days" in sys.argv else 90
-VPS=os.environ.get("BCC_VPS","root@<vps-host>"); KEY=os.path.expanduser("~/.ssh/babanuj_deploy")
+parser=argparse.ArgumentParser()
+parser.add_argument("--days", type=int, help="pull an explicit trailing window")
+parser.add_argument("--full", action="store_true", help="pull the full Amazon retention window")
+args=parser.parse_args()
+if args.days is not None and args.days < 1:
+    parser.error("--days must be at least 1")
+if args.days is not None and args.full:
+    parser.error("--days and --full are mutually exclusive")
 
-env=A.load_env(A.ENV); access=A.refresh_token(env)
+VPS=os.environ["BCC_VPS"]
+KEY=os.path.expanduser(os.environ.get("BCC_SSH_KEY", "~/.ssh/babanuj_deploy"))
+
+env=A.load_env(A.ENV)
 cid=env.get("AMAZON_ADS_API_CLIENT_ID") or env["AMAZON_ADS_CLIENT_ID"]
-H={"Authorization":"Bearer "+access,"Amazon-Advertising-API-ClientId":cid,
-   "Amazon-Advertising-API-Scope":env["AMAZON_ADS_PROFILE_ID"]}
-END=date.today()-timedelta(days=1); START=END-timedelta(days=DAYS-1)
+H={}
+END=date.today()-timedelta(days=1)
+FULL_DAYS=90
 
-def report(report_type, group_by, columns):
+def refresh_headers():
+    global H
+    H.clear()
+    H.update({"Authorization":"Bearer "+A.refresh_token(env),
+              "Amazon-Advertising-API-ClientId":cid,
+              "Amazon-Advertising-API-Scope":env["AMAZON_ADS_PROFILE_ID"]})
+
+def prod_psql(sql, timeout=180):
+    p=subprocess.run(["ssh","-i",KEY,"-o","BatchMode=yes",VPS,
+                      "docker exec -i bcc-prod-postgres psql -U bcc -d bcc -At -v ON_ERROR_STOP=1"],
+                     input=sql,capture_output=True,text=True,timeout=timeout)
+    if p.returncode != 0:
+        detail=(p.stderr or p.stdout).strip()[-500:]
+        raise RuntimeError(f"prod DB command failed: {detail}")
+    return p.stdout
+
+def max_date(table):
+    if table not in {"amazon_ad_daily", "amazon_campaign_daily"}:
+        raise ValueError(f"unsupported archive table: {table}")
+    value=prod_psql(f"select max(date) from {table};").strip()
+    return date.fromisoformat(value) if value else None
+
+def window_start(table):
+    if args.days is not None:
+        return END-timedelta(days=args.days-1)
+    if args.full:
+        return END-timedelta(days=FULL_DAYS-1)
+    latest=max_date(table)
+    return (latest-timedelta(days=3)) if latest else END-timedelta(days=FULL_DAYS-1)
+
+def report(report_type, group_by, columns, start):
     """Amazon caps DAILY reports at 31 days per request — chunk and concatenate."""
-    out=[]; s=START
+    out=[]; s=start
     while s<=END:
         e=min(s+timedelta(days=30), END)
         out.extend(_report_window(report_type, group_by, columns, s, e))
@@ -40,32 +79,67 @@ def report(report_type, group_by, columns):
     return out
 
 def _report_window(report_type, group_by, columns, win_start, win_end):
+    # A fresh token per window keeps a deep backfill from crossing the LWA
+    # token lifetime. The poll is capped at 80 * 30s = 40 minutes.
+    refresh_headers()
     body={"name":"archive","startDate":win_start.isoformat(),"endDate":win_end.isoformat(),
           "configuration":{"adProduct":"SPONSORED_PRODUCTS","groupBy":group_by,"columns":columns,
                            "reportTypeId":report_type,"timeUnit":"DAILY","format":"GZIP_JSON"}}
     ch=dict(H); ch["Content-Type"]="application/vnd.createasyncreportrequest.v3+json"
-    rid=json.loads(urllib.request.urlopen(urllib.request.Request(
-        "https://advertising-api.amazon.com/reporting/reports",data=json.dumps(body).encode(),
-        headers=ch,method="POST"),timeout=60).read())["reportId"]
+    def request(url, data=None, headers=None, method=None, timeout=60, authenticate=True):
+        for attempt in range(2):
+            try:
+                return urllib.request.urlopen(urllib.request.Request(
+                    url, data=data,
+                    headers=(headers if headers is not None else (H if authenticate else {})),
+                    method=method), timeout=timeout)
+            except urllib.error.HTTPError as e:
+                if e.code != 401 or attempt:
+                    raise
+                refresh_headers()
+                if headers is not None and authenticate:
+                    headers.clear()
+                    headers.update(H)
+
+    try:
+        response=request("https://advertising-api.amazon.com/reporting/reports",
+                         data=json.dumps(body).encode(),headers=ch,method="POST")
+        with response:
+            rid=json.loads(response.read())["reportId"]
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"[{report_type}] report request failed with HTTP {e.code}") from e
     print(f"[{report_type}] {win_start}..{win_end} report {rid} — polling…", file=sys.stderr)
     for _ in range(80):
         try:
-            r=json.loads(urllib.request.urlopen(urllib.request.Request(
-                "https://advertising-api.amazon.com/reporting/reports/"+rid,headers=H),timeout=60).read())
+            response=request("https://advertising-api.amazon.com/reporting/reports/"+rid,
+                             headers=H)
+            with response:
+                r=json.loads(response.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                print(f"[{report_type}] poll unauthorized after token refresh", file=sys.stderr)
+            raise RuntimeError(f"[{report_type}] poll failed with HTTP {e.code}") from e
         except urllib.error.URLError:
             time.sleep(30); continue
         if r["status"]=="COMPLETED":
-            return json.loads(gzip.decompress(urllib.request.urlopen(r["url"],timeout=120).read()).decode())
+            try:
+                # Amazon's completed-report URL is pre-signed; bearer headers
+                # turn an otherwise valid download into HTTP 400.
+                response=request(r["url"],headers={},timeout=120,authenticate=False)
+                with response:
+                    return json.loads(gzip.decompress(response.read()).decode())
+            except urllib.error.HTTPError as e:
+                raise RuntimeError(f"[{report_type}] download failed with HTTP {e.code}") from e
         if r["status"]=="FAILED":
-            print(f"[{report_type}] FAILED {r.get('failureReason')}", file=sys.stderr); return []
+            raise RuntimeError(f"[{report_type}] FAILED {r.get('failureReason')}")
         time.sleep(30)
-    print(f"[{report_type}] timed out", file=sys.stderr); return []
+    raise RuntimeError(f"[{report_type}] timed out after 40 minutes")
 
 def num(x): 
     try: return float(x or 0)
     except: return 0.0
 
-sql=["begin;",
+SCHEMA_SQL=[
  """create table if not exists amazon_ad_daily(
       asin text not null, date date not null,
       spend numeric(12,2) not null default 0, sales numeric(12,2) not null default 0,
@@ -81,8 +155,16 @@ sql=["begin;",
       archived_at timestamptz not null default now(),
       primary key(campaign_id,date));"""]
 
+# Ensure max(date) queries work on a fresh archive as well as an existing one.
+prod_psql("begin;\n"+"\n".join(SCHEMA_SQL)+"\ncommit;")
+ad_start=window_start("amazon_ad_daily")
+campaign_start=window_start("amazon_campaign_daily")
+print(f"[window] ad {ad_start}..{END}; campaign {campaign_start}..{END}", file=sys.stderr)
+
+sql=["begin;", *SCHEMA_SQL]
+
 rows=report("spAdvertisedProduct",["advertiser"],
-            ["date","advertisedAsin","cost","sales30d","purchases30d","clicks","impressions"])
+            ["date","advertisedAsin","cost","sales30d","purchases30d","clicks","impressions"], ad_start)
 agg={}
 for x in rows:
     a,d=x.get("advertisedAsin"),(x.get("date") or "")[:10]
@@ -98,7 +180,7 @@ for (a,d),v in agg.items():
 print(f"[ad] {len(agg)} asin-days", file=sys.stderr)
 
 crows=report("spCampaigns",["campaign"],
-             ["date","campaignId","campaignName","cost","sales30d","purchases30d","clicks","impressions"])
+             ["date","campaignId","campaignName","cost","sales30d","purchases30d","clicks","impressions"], campaign_start)
 cagg={}
 for x in crows:
     c,d=str(x.get("campaignId") or ""),(x.get("date") or "")[:10]
@@ -116,7 +198,10 @@ print(f"[campaign] {len(cagg)} campaign-days", file=sys.stderr)
 
 sql.append("commit;")
 p=subprocess.run(["ssh","-i",KEY,"-o","BatchMode=yes",VPS,
-                  "docker exec -i bcc-prod-postgres psql -U bcc -d bcc"],
+                  "docker exec -i bcc-prod-postgres psql -U bcc -d bcc -v ON_ERROR_STOP=1"],
                  input="\n".join(sql),capture_output=True,text=True,timeout=600)
-if p.returncode!=0: print(p.stderr[-400:], file=sys.stderr); sys.exit(1)
-print(f"[archive] {START}..{END} written (ad {len(agg)}, campaign {len(cagg)})")
+if p.returncode!=0:
+    detail=(p.stderr or p.stdout).strip()[-500:]
+    print(f"FATAL: prod archive DB write failed: {detail}", file=sys.stderr)
+    sys.exit(1)
+print(f"[archive] ad {ad_start}..{END}; campaign {campaign_start}..{END} written (ad {len(agg)}, campaign {len(cagg)})")
