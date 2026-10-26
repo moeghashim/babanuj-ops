@@ -39,7 +39,7 @@ gaql = ("SELECT campaign.name, campaign.status, metrics.cost_micros, metrics.cli
         "FROM campaign WHERE segments.date DURING LAST_30_DAYS "
         "ORDER BY metrics.cost_micros DESC")
 req = urllib.request.Request(
-    f'https://googleads.googleapis.com/v22/customers/{ACCOUNT}/googleAds:search',
+    f'https://googleads.googleapis.com/v24/customers/{ACCOUNT}/googleAds:search',
     data=json.dumps({'query': gaql}).encode(), headers=hdr)
 res = json.loads(urllib.request.urlopen(req).read().decode())
 
