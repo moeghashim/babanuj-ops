@@ -263,7 +263,7 @@ def pull_google(days, verbose):
         if page:
             body["pageToken"] = page
         req = urllib.request.Request(
-            f"https://googleads.googleapis.com/v22/customers/{GOOGLE_ADS_ACCOUNT}/googleAds:search",
+            f"https://googleads.googleapis.com/v24/customers/{GOOGLE_ADS_ACCOUNT}/googleAds:search",
             data=json.dumps(body).encode(), headers=hdr)
         res = json.loads(urllib.request.urlopen(req).read().decode())
         for r in res.get("results", []):
